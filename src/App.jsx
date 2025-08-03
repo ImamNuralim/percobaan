@@ -28,10 +28,10 @@ function App() {
     <div className="tentang mt-32 xl:px-15 py-10" id="tentang">
       <div className="xl:w-2/3  lg:w-3/4 w-full mx-auto p-7 bg-gray-100/50 rounded-lg" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
       <h1 className="text-3xl/tight font-bold mb-6">Tentang Kami</h1>
-      <img src={DataImage.HeroImage} alt="Image" className="w-12 rounded-md mb-10 sm:hidden" />
+      <img src={DataImage.MujoFolks} alt="Image" className="w-12 rounded-md mb-10 sm:hidden" />
         <p className="text-base/lose mb-10 opacity-60">Kami adalah Mbojostudio, sebuah studio kreatif yang bergerak di bidang desain dan pengembangan digital. Kami berkomitmen untuk memberikan solusi terbaik bagi klien kami.</p>
       <div className="flex items-center gap-10 justify-between">
-        <img src={DataImage.HeroImage} alt="Image" className="w-12 rounded-md sm:block hidden" />
+        <img src={DataImage.MujoFolks} alt="Image" className="w-12 rounded-md sm:block hidden" />
         <div className="flex items-center gap-10">
           <div>
             <h1 className="text-4xl/tight md-1">
