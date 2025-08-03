@@ -8,16 +8,16 @@ export default Image;
 
 import Tools1 from "/assets/tools/vscode.png";
 import Tools2 from "/assets/tools/reactjs.png";
-import Tools3 from "/assets/tools/nextjs.png";
+import Tools3 from "/assets/tools/Laravel.svg";
 import Tools4 from "/assets/tools/tailwind.png";
 import Tools5 from "/assets/tools/bootstrap.png";
-import Tools6 from "/assets/tools/js.png";
-import Tools7 from "/assets/tools/nodejs.png";
-import Tools8 from "/assets/tools/github.png";
-import Tools9 from "/assets/tools/ai.png";
-import Tools10 from "/assets/tools/canva.png";
+import Tools6 from "/assets/tools/electron.svg";
+import Tools7 from "/assets/tools/js.png";
+import Tools8 from "/assets/tools/nodejs.png";
+import Tools9 from "/assets/tools/github.png";
+import Tools10 from "/assets/tools/Adobe_Photoshop_CC_icon.svg";
 import Tools11 from "/assets/tools/figma.png";
-
+import Tools12 from "/assets/tools/wordpress.png";
 export const listTools = [
   {
     id: 1,
@@ -29,14 +29,14 @@ export const listTools = [
   {
     id: 2,
     gambar: Tools2,
-    nama: "React JS",
+    nama: "React",
     ket: "Framework",
     dad: "200",
   },
   {
     id: 3,
     gambar: Tools3,
-    nama: "Next JS",
+    nama: "Laravel",
     ket: "Framework",
     dad: "300",
   },
@@ -57,37 +57,37 @@ export const listTools = [
   {
     id: 6,
     gambar: Tools6,
-    nama: "Javascript",
-    ket: "Language",
+    nama: "Electron JS",
+    ket: "Framework",
     dad: "600",
   },
   {
     id: 7,
     gambar: Tools7,
+    nama: "Javascript",
+    ket: "Language",
+    dad: "600",
+  },
+  {
+    id: 8,
+    gambar: Tools8,
     nama: "Node JS",
     ket: "Javascript Runtime",
     dad: "700",
   },
   {
-    id: 8,
-    gambar: Tools8,
+    id: 9,
+    gambar: Tools9,
     nama: "Github",
     ket: "Repository",
     dad: "800",
   },
   {
-    id: 9,
-    gambar: Tools9,
-    nama: "Adobe Illustrator",
-    ket: "Design App",
-    dad: "900",
-  },
-  {
     id: 10,
     gambar: Tools10,
-    nama: "Canva",
+    nama: "Adobe Photoshop",
     ket: "Design App",
-    dad: "1000",
+    dad: "900",
   },
   {
     id: 11,
@@ -96,6 +96,12 @@ export const listTools = [
     ket: "Design App",
     dad: "1100",
   },
+  { id: 12,
+    gambar: Tools12,
+    nama: "Wordpress",
+    ket: "CMS",
+    dad: "1200",
+  }
 ];
 
 import Proyek1 from "/assets/proyek/proyek1.webp";

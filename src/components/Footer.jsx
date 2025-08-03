@@ -3,7 +3,7 @@ import React from 'react'
 export const Footer = () => {
   return (
     <div className=' text-black/50 flex md:flex-row flex-col justify-between items-center py-4 mt-32'>
-        <h1 className='text-2xl font-bold'>Mbojostudio</h1>
+        <h1 className='text-2xl font-bold'>Mojo Folks</h1>
         <div className='flex gap-10'>
             <a href="#home">Home</a>
             <a href="#tentang">Tentang</a>
