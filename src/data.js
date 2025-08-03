@@ -1,7 +1,7 @@
 import HeroImage from "/assets/hero-img.webp";
-
+import MujoFolks from "/assets/Mujo Folks2.png"
 const Image = {
-  HeroImage,
+  MujoFolks,
 };
 
 export default Image;
@@ -99,12 +99,11 @@ export const listTools = [
 ];
 
 import Proyek1 from "/assets/proyek/proyek1.webp";
-import Proyek2 from "/assets/proyek/proyek2.webp";
-import Proyek3 from "/assets/proyek/proyek3.webp";
-import Proyek4 from "/assets/proyek/proyek4.webp";
-import Proyek5 from "/assets/proyek/proyek5.webp";
-import Proyek6 from "/assets/proyek/proyek6.webp";
-
+import Proyek2 from "/assets/proyek/project cerindo.png";
+import Proyek3 from "/assets/proyek/project-fadatour.png";
+import Proyek4 from "/assets/proyek/project-GCI.png";
+import Proyek5 from "/assets/proyek/project-kraton-surakarta.png";
+import Proyek6 from "/assets/proyek/project-risebloom.png";
 export const listProyek = [
   {
     id: 1,
@@ -117,40 +116,40 @@ export const listProyek = [
   {
     id: 2,
     gambar: Proyek2,
-    nama: "Company Profile",
-    desk: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
-    tools: ["HTML", "CSS", "Javascript", "AOS", "Swiper", "Lightbox Gallery"],
+    nama: "Landing Page PT. Cerindo Corp",
+    desk: "Landingpage untuk website GIS PT. Cerindo Corp yang bergerak dibidang dipertambangan nikel.",
+    tools: ["HTML", "CSS", "Javascript", "AOS", "Lightbox Gallery"],
     dad: "300",
   },
   {
     id: 3,
     gambar: Proyek3,
-    nama: "Web Pernikahan 2.0",
-    desk: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
-    tools: ["Vite", "ReactJS", "TailwindCSS", "AOS"],
+    nama: "Fada Tour Semarang",
+    desk: "Company profile Fada Tour Semarang yang bergerak di bidang umrah dan travel.",
+    tools: ["Wordpress", "Elementor"],
     dad: "400",
   },
   {
     id: 4,
     gambar: Proyek4,
-    nama: "Website Course",
-    desk: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
-    tools: ["Vite", "ReactJS", "Bootstrap", "AOS"],
+    nama: "Company Profile PT. GCI",
+    desk: "Website perusahaan PT. Geimineup Consulting Indipendent",
+    tools: ["html", "CSS", "Javascript", "Bootstrap", "AOS"],
     dad: "500",
   },
   {
     id: 5,
     gambar: Proyek5,
-    nama: "Web Portfolio",
-    desk: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
-    tools: ["HTML", "CSS", "Javascript", "Bootsrap"],
+    nama: "E-Catalog Kraton Surakarta",
+    desk: "Website E-Catalog Kraton Surakarta yang menampilkan berbagai produk dan informasi terkait koleksi museum.",
+    tools: ["Wordpress", "Elementor"],
     dad: "600",
   },
   {
     id: 6,
     gambar: Proyek6,
-    nama: "Company Profile 2.0",
-    desk: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
+    nama: "Risebloom x UNDIP",
+    desk: "Website kolaborasi antara Risebloom dan UNDIP sebagai website edukasi terkait cara pencegahan Penyakit Seksual Menular (PSM) dan HIV/AIDS.",
     tools: ["NextJS", "TailwindCSS", "Framermotion"],
     dad: "700",
   },

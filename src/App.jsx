@@ -3,25 +3,25 @@ import { listTools } from "./data";
 import { listProyek } from "./data";
 
 
+
 function App() {
   
-
   return (
     <>
     <div className="hero xl:px-15 grid md:grid-cols-2 items-center pt-10 xl:gap-0 gap-10 grid-cols-1">
         <div className="animate__animated animate__fadeInUp animate__delay-2s">
           <div className="flex items-center gap-3 mb-6 bg-gray-100/50 w-fit p-4 rounded-2xl">
-            <img src={DataImage.HeroImage} alt="Hero Image" className="w-10 rounded-md"/>
-            <q>Lorem ipsum dolor sit amet</q>
+            <img src={DataImage.MujoFolks} alt="Hero Image" className="w-10 rounded-md"/>
+            <p>Kami percaya kemajuan teknologi <br /> dimulai dari hal yang terasa sederhana.</p>
           </div>
-          <h1 className="text-5xl/tight font-bold mb-6 ">Nama saya Mbojostudio</h1>
-          <p className="text-base/lose mb-6 opacity-60">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint atque nihil ipsum incidunt? Atque, quae. Recusandae illum possimus eveniet ex sapiente natus quisquam libero veritatis inventore, itaque asperiores.</p>
+          <h1 className="text-5xl/tight font-bold mb-6 ">Transformasi Digital Dimulai di Sini</h1>
+          <p className="text-base/lose mb-6 opacity-60">Kami membangun pengalaman digital yang profesional, cepat, dan berkesan untuk mendukung pertumbuhan bisnis Anda.</p>
           <div className="flex items-center sm:gap-4 gap-2">
             <a href="#" className="bg-blue-500/50 text-white py-2 px-4 rounded-2xl hover:bg-blue-500">Join Now! <i className="ri-whatsapp-line ri-lg"></i></a>
             <a href="#proyek" className="bg-gray-400/80 text-white py-2 px-4 rounded-2xl hover:bg-gray-400/100">Lihat Project <i className="ri-arrow-down-line ri-lg"></i></a>
           </div>
         </div>
-        <img src={DataImage.HeroImage} alt="Hero Image" className="w-[500px] md:ml-auto animate__animated animate__fadeInUp animate__delay-3s"/>
+        <img src={DataImage.MujoFolks} alt="Hero Image" className="w-[500px] md:ml-auto animate__animated animate__fadeInUp animate__delay-3s"/>
     </div>
 
     {/*Tentang*/}
