@@ -1,5 +1,5 @@
 import HeroImage from "/assets/hero-img.webp";
-import MujoFolks from "/assets/Mujo Folks2.png"
+import MujoFolks from "/assets/img/mujo.png"
 const Image = {
   MujoFolks,
 };
@@ -156,7 +156,7 @@ export const listProyek = [
     gambar: Proyek6,
     nama: "Risebloom x UNDIP",
     desk: "Website kolaborasi antara Risebloom dan UNDIP sebagai website edukasi terkait cara pencegahan Penyakit Seksual Menular (PSM) dan HIV/AIDS.",
-    tools: ["NextJS", "TailwindCSS", "Framermotion"],
+    tools: ["HTML", "CSS", "Js"],
     dad: "700",
   },
 ];

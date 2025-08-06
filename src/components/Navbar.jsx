@@ -1,46 +1,70 @@
-import React from 'react'
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { Menu, X } from 'lucide-react'; // Icon menu & close (pakai lucide atau bebas lainnya)
 
 const Navbar = () => {
-  const [active, setActive] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [showNavbar, setShowNavbar] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
-  useEffect (() => {
+  // Handle scroll hide/show
+  useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 150) {
-        setActive(true);
+      if (window.scrollY > lastScrollY && window.scrollY > 100) {
+        setShowNavbar(false); // scroll down
       } else {
-        setActive(false);
+        setShowNavbar(true); // scroll up
       }
-    }
+      setLastScrollY(window.scrollY);
+    };
+
     window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };  
-  }, []);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY]);
 
   return (
-    <div className="navbar px-10 py-7 flex items-center justify-between">
-      <div className="logo">
-        <a href="/"><img src="/assets/Mujo Folks2.png" alt="Logo" className="h-10 w-auto" /></a>
+    <div
+      className={`fixed w-full z-50 px-6 py-4 transition-all duration-500 ${showNavbar ? 'top-0' : '-top-24'
+        } bg-white/10 backdrop-blur-md`}
+    >
+      <div className="flex justify-between items-center">
+        {/* Logo */}
+        <a href="/" className="h-10">
+          <img src="/assets/img/Mujo Studio.png" alt="Logo" className="h-12 w-auto " />
+        </a>
+
+        {/* Desktop Menu */}
+        <ul className="hidden md:flex items-center gap-8 text-white font-medium">
+          <li><a href="/" className="hover:underline">Home</a></li>
+          <li><a href="/about" className="hover:underline">Tentang</a></li>
+          <li><a href="#proyek" className="hover:underline">Project</a></li>
+          <li><a href="#kontak" className="hover:underline">Kontak</a></li>
+        </ul>
+
+        {/* Hamburger Button */}
+        <button
+  className="md:hidden text-white z-50" // tambahkan z-50 kalau perlu
+  onClick={() => setMenuOpen(!menuOpen)}
+>
+  {menuOpen ? <X size={28} /> : <Menu size={28} />}
+</button>
+
       </div>
-      <ul className={`menu flex items-center sm:gap-10 gap-4 fixed md:static left-1/2 -translate-x-1/2 
-      md:-translate-0 md:opacity-100 md:top-0 bg-white/30 backdrop-blur-md p-4 rounded-br-2xl rounded-bl-2xl md:bg-transparent z-40 transition-all md:transition-none  ${active ? "top-0 opacity-100" : "-top-10 opacity-0"}`}>
-        <li>
-          <a href="/" className="sm:text-l text-base font-medium">Home</a>
-        </li>
-        <li>
-          <a href="#tentang" className="sm:text-l text-base font-medium">Tentang</a>
-        </li>
-        <li>
-          <a href="#proyek" className="sm:text-l text-base font-medium">Project</a>
-        </li>
-        <li>
-          <a href="#kontak" className="sm:text-l text-base font-medium">Kontak</a>
-        </li>
-      </ul>
 
+      {/* Mobile Menu */}
+      <div
+        className={`md:hidden fixed top-0 left-0 w-full h-screen bg-black/80 backdrop-blur z-40 transform transition-transform duration-300 ${menuOpen ? 'translate-y-0' : '-translate-y-full'
+          }`}
+      >
+        <div className="p-6 flex flex-col gap-6 text-white text-lg mt-20 items-center">
+          <a href="/" onClick={() => setMenuOpen(false)}>Home</a>
+          <a href="/about" onClick={() => setMenuOpen(false)}>Tentang</a>
+          <a href="#proyek" onClick={() => setMenuOpen(false)}>Project</a>
+          <a href="#kontak" onClick={() => setMenuOpen(false)}>Kontak</a>
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
