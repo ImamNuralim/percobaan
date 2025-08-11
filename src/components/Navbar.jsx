@@ -30,7 +30,7 @@ const Navbar = () => {
       <div className="flex justify-between items-center">
         {/* Logo */}
         <a href="/" className="h-10">
-          <img src="/assets/img/Mujo Studio.png" alt="Logo" className="h-12 w-auto " />
+          <img src="/assets/img/Mujo Studio.webp" alt="Logo" className="h-12 w-auto " />
         </a>
 
         {/* Desktop Menu */}

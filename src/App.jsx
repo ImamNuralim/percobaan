@@ -1,6 +1,6 @@
 import DataImage from "./data";
-import { listTools } from "./data";
-import { listProyek } from "./data";
+import { listClient } from './data';
+import { listBidangUsaha } from "./data"
 
 
 
@@ -8,135 +8,173 @@ function App() {
 
   return (
     <>
-      <div className="hero xl:px-15 grid md:grid-cols-2 items-center pt-30 xl:gap-0 gap-10 grid-cols-1">
+      <div className="hero py-4 xl:px-15 grid md:grid-cols-2 items-center pt-30 xl:gap-0 gap-10 grid-cols-1">
         <div className="animate__animated animate__fadeInUp animate__delay-2s">
-          <div className="flex items-center gap-3 mb-6 w-fit p-4 rounded-2xl">
-            <p className="text-violet-700 text-l font-bold">BEST IT SOLUTIONS AGENCY</p>
+          <div className="flex items-center gap-3 mb-6 w-fit p-1 rounded-md">
+            <p className="text-white text-l font-bold">BEST IT SOLUTIONS AGENCY</p>
           </div>
-          <h1 className="text-5xl/tight font-bold mb-6 text-white">Transformasi Digital Dimulai di Sini</h1>
-          <p className="text-base/lose mb-6 opacity-60 text-white">Kami membangun pengalaman digital yang profesional, cepat, dan berkesan untuk mendukung pertumbuhan bisnis Anda.</p>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl/tight font-bold mb-6 text-white">Future in the Digital Solutions</h1>
+          <img src="/assets/img/hero home.png" alt="Hero Image" className="block md:hidden w-[1200px] md:ml-auto animate__animated animate__fadeInUp animate__delay-1s  md:scale-170 pt-15 lg:translate-x-30 filter drop-shadow-[0_35px_60px_#4426F0]" />
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl/relaxed mb-6 opacity-60 text-white">Kami membangun dan menghadirkan solusi teknologi yang mendorong pertumbuhan, efisiensi, dan keunggulan kompetitif.</p>
           <div className="flex items-center sm:gap-4 gap-2">
             <a href="https://wa.me/6281337961020?text=Halloo%20Mojo%20Folks:)" target="_blank"
               rel="noopener noreferrer"
-              className="bg-gradient-to-r from-[#4426F0] to-[#7D54F7] text-white py-2 px-4 rounded-2xl hover:bg-violet-500">Join Now! <i className="ri-whatsapp-line ri-lg"></i></a>
-            <a href="#proyek" className="bg-gray-400/80 text-white py-2 px-4 rounded-2xl hover:bg-gray-400/100">Lihat Project <i className="ri-arrow-down-line ri-lg"></i></a>
+              className="bg-blue-700 hover:bg-blue-600 text-white py-2 px-4 rounded-md">Join Now! <i className="ri-whatsapp-line ri-lg"></i></a>
+            <a href="#proyek" className="bg-gray-400/80 text-white py-2 px-4 rounded-md hover:bg-gray-400/100">Lihat Project <i className="ri-arrow-down-line ri-lg"></i></a>
           </div>
         </div>
-        <img src="/assets/img/hero home.png" alt="Hero Image" className=" w-[1200px] md:ml-auto animate__animated animate__fadeInUp animate__delay-3s  md:scale-170 pt-15 lg:translate-x-30 filter drop-shadow-[0_35px_60px_#4426F0]" />
+        <img src="/assets/img/hero home.png" alt="Hero Image" className="hidden md:block w-[1200px] md:ml-auto animate__animated animate__fadeInUp animate__delay-3s  md:scale-170 pt-15 lg:translate-x-30 filter drop-shadow-[0_35px_60px_#4426F0]" />
       </div>
 
+      {/* Tentang */}
+      <div className="xl:mt-56 md:mt-25 grid grid-cols-1 md:grid-cols-2 gap-0 w-screen -ml-[50vw] -mr-[50vw] relative left-1/2 right-1/2 overflow-hidden">
+        <div className="bg-blue-900 h-[400px] md:h-auto overflow-hidden relative">
+          <img
+            src="/assets/img/Mojo Tentang.webp"
+            alt="Abstract technology illustration"
+            className="w-full h-full object-cover opacity-80"
+          />
+        </div>
 
-      {/*Tentang*/}
-      <div className="tentang xl:mt-56 md:mt-25 xl:px-15 py-10" id="tentang">
-        <div className="xl:w-2/3  lg:w-3/4 w-full mx-auto p-7 bg-gray-100/50 rounded-lg" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
-          <h1 className="text-3xl/tight font-bold mb-6 text-white">Tentang Kami</h1>
-          <img src="/assets/img/Mujo Studio.png" alt="Image" className="w-55 rounded-md mb-10 sm:hidden" />
-          <p className="text-base/lose mb-10 opacity-60 text-white">Kami adalah Mbojostudio, sebuah studio kreatif yang bergerak di bidang desain dan pengembangan digital. Kami berkomitmen untuk memberikan solusi terbaik bagi klien kami.</p>
-          <div className="flex items-center gap-10 justify-between">
-            <img src="/assets/img/Mujo Studio.png" alt="Image" className="w-55   rounded-md sm:block hidden" />
-            <div className="flex items-center gap-10">
-              <div>
-                <h1 className="text-4xl/tight md-1 text-white">
-                  10<span className="text-violet-700">+</span>
-                </h1>
-                <p className="text-white">Project Selesai</p>
-              </div>
-              <div>
-                <h1 className="text-4xl/tight md-1 text-white">
-                  2<span className="text-violet-700">+</span>
-                </h1>
-                <p className="text-white">Tahun Pengalaman</p>
-              </div>
-            </div>
-          </div>
+        <div className="bg-white p-8 md:p-16 flex flex-col justify-center">
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-800 leading-tight mb-4">
+            Mojo Folks – Future Tech Insights 2025
+          </h2>
+          <p className="text-gray-600 text-lg mb-6 max-w-prose">
+            Kami percaya masa depan dibentuk oleh inovasi hari ini. Di <span className="font-bold">Mojo Folks</span> , kami mengulas dan membedah teknologi-teknologi terbaru yang siap mengubah cara kita hidup, bekerja, dan berkreasi. Dari tren digital terkini hingga terobosan masa depan, temukan wawasan yang akan membantu bisnis dan ide Anda berkembang di era yang serba cepat ini.
+          </p>
+          <a href="#" className="flex items-center  font-semibold hover:underline">
+            Tentang Kami
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+              <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+            </svg>
+          </a>
+        </div>
+
+        {/* Service */}
+        <div className="bg-zinc-900 p-8 md:p-16 flex flex-col justify-center">
+          <h2 className="text-3xl md:text-5xl font-bold text-white leading-tight mb-4">
+            We Help Businesses Grow Through Innovative Digital Solutions
+          </h2>
+          <p className="text-gray-300 text-lg mb-6 max-w-prose">
+            Kami membantu bisnis Anda berkembang melalui solusi digital inovatif, mulai dari pembuatan website, aplikasi, hingga strategi pemasaran online yang efektif.
+          </p>
+          <a href="#" className="flex items-center text-white font-semibold hover:underline">
+            More Sevice
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+              <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+            </svg>
+          </a>
+        </div>
+        <div className="bg-blue-500 h-[400px] md:h-auto overflow-hidden relative">
+          <img
+            src="/assets/img/section-tentang.webp"
+            alt="Two people wearing safety glasses working"
+            className="w-full h-full object-cover"
+          />
         </div>
       </div>
 
-      {/*Tools*/}
-
-      <div className="tools mt-32 xl:px-15" id="tools">
-        <h1 className="text-3xl/snug font-bold mb-4 text-white" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">Tools yang kami pakai</h1>
-        <p className="xl:w-2/5 lg:w-2/4 md:w-2/3 sm:w-3/4 w-full text-base/lose mb-10 opacity-50 text-white" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-once="true" >Berikut adalah beberapa tools yang kami gunakan dalam setiap proyek:</p>
-        <div className="tools-box mt-14 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
-
-          {listTools.map((tool) => (
-            <div className="flex items-center gap-2 p-3 border border-gray-400 rounded-md hover:bg-gray-200/70 group" key={tool.id} data-aos="fade-up" data-aos-duration="1000" data-aos-delay={tool.dad} data-aos-once="true">
-              <img src={tool.gambar} alt="Tools Image" className="w-14 bg-zinc-700 p-1 group-hover:bg-zinc-300" />
-              <div>
-                <h4 className="text-bold text-white">{tool.nama}</h4>
-                <p className="text-white">{tool.ket}</p>
-              </div>
-            </div>
-          ))}
-
-        </div>
+      {/** Bidang Usaha */}
+      <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-white backdrop-blur-md py-20" id="bidang-usaha">
+      <div className="max-w-7xl mx-auto px-4">
+        <div class="flex flex-col md:flex-row gap-8 mb-8 md:mb-16">
+      <div class="w-full md:w-1/2">
+        <h2 class="text-3xl md:text-5xl font-bold text-zinc-800 leading-tight">
+          What sectors of the economy do we serve
+        </h2>
+        <p class="text-gray-600 text-base pt-3">
+                Kami melayani berbagai sektor ekonomi dengan solusi digital yang dirancang untuk mendukung pertumbuhan dan kesuksesan bisnis Anda.
+              </p>
       </div>
-      {/*tentang*/}
+      
+    </div>
 
-      {/*Proyek*/}
-      <div className="proyek mt-32 xl:px-15 mb-15" id="proyek">
-        <h1 className="text-3xl/snug font-bold mb-4 text-white" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">Proyek Kami</h1>
-        <p className="xl:w-2/5 lg:w-2/4 md:w-2/3 sm:w-3/4 w-full text-base/lose mb-10 opacity-50 text-white" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-once="true">Berikut adalah beberapa proyek yang telah kami selesaikan:</p>
-        <div className="proyek-box grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 gap-6 text-white">
-          {listProyek.map((proyek) => (
-            <div className="bg-zinc-700 p-4 rounded-lg hover:bg-zinc-00" key={proyek.id} data-aos="fade-up" data-aos-duration="1000" data-aos-delay={proyek.dad} data-aos-once="true">
-              <img src={proyek.gambar} alt={proyek.nama} className="w-full h-auto rounded-md mb-4" />
-              <h3 className="text-xl/tight font-bold mb-2">{proyek.nama}</h3>
-              <p className="text-base/lose mb-2">{proyek.desk}</p>
-              <div className="flex flex-wrap gap-2">
-                {proyek.tools.map((tool, index) => (
-                  <span key={index} className="bg-zinc-500/50 text-white px-2 py-1 rounded-md text-sm">{tool}</span>
-                ))}
-              </div>
-              <div className="mt-8 text-center">
-                <a href="" className="bg-gradient-to-r from-[#4426F0] to-[#7D54F7] p-3 rounded-lg block border-zinc-600 hover:bg-violet-600">Detail Project</a>
-              </div>
-            </div>
-          ))}
-        </div>
+        <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-2 gap-6 mx-auto">
+  {listBidangUsaha.map((bidang, index) => (
+    <div
+      key={bidang.id}
+      className="relative h-32 md:h-40 group overflow-hidden bg-gray-600"
+    >
+      <img
+        src={bidang.gambar}
+        alt={bidang.nama}
+        className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-110 transition-all duration-300"
+      />
+      <div className="absolute inset-0 flex items-end p-4">
+        <div className="text-white font-semibold text-lg">{bidang.nama}</div>
       </div>
-
-      {/*Proyek*/}
-
-      {/*Kontak*/}
-      <div className="kontak -mx-4 xl:px-15 grid md:grid-cols-2 items-center pt-10 xl:gap-0 gap-10 grid-cols-1 ">
-        <div className="animate__animated animate__fadeInUp animate__delay-2s mx-10 " data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
-          <div className="flex items-center gap-3 mb-6 bg-zinc-100/50 w-fit p-4 rounded-2xl">
-            <img src={DataImage.MujoFolks} alt="Hero Image" className="w-10 rounded-md" />
-          </div>
-          <h1 className="text-5xl/tight font-bold mb-6 text-white">Transformasi Digital Dimulai di Sini</h1>
-          <p className="text-base/lose mb-6 opacity-80 text-white">Kami membangun pengalaman digital yang profesional, cepat, dan berkesan untuk mendukung pertumbuhan bisnis Anda.</p>
-          <div className="flex items-center sm:gap-4 gap-2">
-            <a href="https://wa.me/6281337961020?text=Halloo%20Mojo%20Folks:)" className="bg-gradient-to-r from-[#4426F0] to-[#7D54F7] text-white py-2 px-4 rounded-2xl hover:bg-blue-500">Join Now! <i className="ri-whatsapp-line ri-lg"></i></a>
-          </div>
-        </div>
-        <div className="kontak mt-32 sm:p-10 p-0 mx-10" id="kontak">
-          <h1 className="text-4xl mb-2 font-bold text-center text-white" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true"  >Kontak</h1>
-          <p className="text-base/loose text-center mb-10 opacity-50 text-white " data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-once="true">Mari bergabung dengan kami</p>
-          <form action="https://formsubmit.co/belugaelsalamnca@gmail.com" method="POST" className="bg-gray-100/50 p-10 rounded-md sm:w-fit w-full mx-auto " autoComplete="off" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" data-aos-once="true">
-            <div className="flex flex-col gap-6">
-              <div className="flex flex-col gap-2">
-                <label className="font-semibold text-white">Nama Lengkap</label>
-                <input type="text" name="nama" placeholder="Masukan Nama..." className="border border-gray-400 p-2 rounded-md text-white" required />
-              </div>
-              <div className="flex flex-col gap-2">
-                <label className="font-semibold text-white">Email</label>
-                <input type="email" name="email" placeholder="Masukan Email..." className="border border-gray-400 p-2 rounded-md text-white" required />
-              </div>
-              <div className="flex flex-col gap-2">
-                <label className="font-semibold text-white">Pesan</label>
-                <textarea name="pesan" id="pesan" cols="45" rows="7" placeholder="Masukan Pesan..." className="border border-gray-400 p-2 rounded-md text-white" required></textarea>
-              </div>
-              <div className="text-center bg-gradient-to-r from-[#4426F0] to-[#7D54F7] hover:bg-blue-500/70 text-white py-2 px-4 rounded-md w-full cursor-pointer">
-                <button type="submit">Kirim Pesan</button>
-              </div>
-            </div>
-          </form>
-        </div>
+    </div>
+  ))}
+</div>
       </div>
+    </div>
 
+  <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-zinc-900 py-16 md:py-24">
+  <div className="max-w-7xl mx-auto px-4 md:px-8 flex flex-col md:flex-row items-center gap-12">
+    {/* Konten Teks */}
+    <div className="md:w-1/2 text-white text-center md:text-left">
+      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-4">
+        Progressive solutions for progressive businesses.
+      </h2>
+      <p className="text-gray-300 text-lg mb-6 md:mb-8 max-w-prose">
+         Kami menyediakan solusi inovatif yang dirancang untuk membantu bisnis berkembang dan beradaptasi di era yang terus berubah, sehingga Anda selalu selangkah di depan.
+      </p>
+      <a href="https://wa.me/6281337961020?text=Halloo%20Mojo%20Folks:)" target="_blank"
+              rel="noopener noreferrer"
+              className="bg-blue-700 hover:bg-blue-600 text-white py-2 px-4 rounded-md">Join Now! <i className="ri-whatsapp-line ri-lg"></i></a>
 
-      {/*Kontak*/}
+    </div>
+
+    {/* Gambar */}
+    <div className="md:w-1/2 flex justify-center p-4">
+      <div className="bg-blue-500 rounded-lg overflow-hidden shadow-lg w-64 h-80 md:w-80 md:h-96">
+        <img
+          src="/assets/img/person-silhouette.webp"
+          alt="Silhouette of a person"
+          className="w-full h-full object-cover bg-blue-500"
+          style={{ filter: 'brightness(0) invert(1)' }}
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+      
+
+      
+
+      
+
+      {/*client*/}
+      <div
+  className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-white backdrop-blur-md py-20"
+  id="client"
+>
+  <div className="max-w-7xl mx-auto px-4">
+    <div className="slider-box flex flex-wrap justify-center gap-6">
+      {listClient.map((client, index) => (
+        <div
+          className="flex items-center justify-center p-4 group transition-transform duration-300 hover:scale-105 basis-[calc(100%/6-1rem)] max-w-[calc(100%/6-1rem)]"
+          key={client.id}
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay={index * 100}
+          data-aos-once="true"
+        >
+          <img
+            src={client.gambar}
+            alt={client.nama}
+            className="max-w-[120px] max-h-[80px] w-full h-full object-contain group-hover:scale-110 transition-all duration-300"
+          />
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
+
     </>
   )
 }

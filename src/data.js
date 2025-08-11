@@ -1,4 +1,4 @@
-import HeroImage from "/assets/hero-img.webp";
+
 import MujoFolks from "/assets/img/mujo.png"
 const Image = {
   MujoFolks,
@@ -159,4 +159,45 @@ export const listProyek = [
     tools: ["HTML", "CSS", "Js"],
     dad: "700",
   },
+];
+
+
+import Client1 from "/assets/img/TIC QnA.webp";
+import Client2 from "/assets/img/risebloom x undip.webp";
+import Client3 from "/assets/img/Cerindo Gis.webp";
+import Client4 from "/assets/img/Kraton Surakarta.webp";
+import Client5 from "/assets/img/logo fadatour.webp";
+import Client6 from "/assets/img/PT GCI.webp";
+import Client7 from "/assets/img/Indocemen.webp";
+import Client8 from "/assets/img/Perhutani KPH Kendal.webp";
+import Client9 from "/assets/img/dphilia.webp";
+
+export const listClient = [
+  { id: 1, nama: "TIC QnA", gambar: Client1 },
+  { id: 2, nama: "Risebloom x UNDIP", gambar: Client2 },
+  { id: 3, nama: "Cerindo GIS", gambar: Client3 },
+  { id: 4, nama: "Kraton Surakarta", gambar: Client4 },
+  { id: 5, nama: "Fada Tour Semarang", gambar: Client5 },
+  { id: 6, nama: "PT GCI", gambar: Client6 },
+  { id: 7, nama: "Indocemen", gambar: Client7 },
+  { id: 8, nama: "Perhutani KPH Kendal", gambar: Client8 },
+  { id: 9, nama: "DPHILIA", gambar: Client9 },
+];
+
+
+import Konstruksi from "/assets/services/konstruksi.webp";
+import Logistik from "/assets/services/logistic.webp";
+import Mining from "/assets/services/mining.webp";
+import Realestate from "/assets/services/real-estate.webp";
+import Retail from "/assets/services/retail.webp";
+import Travel from "/assets/services/travel.webp";
+
+
+export const listBidangUsaha = [
+  { id: 1, nama: "Konstruksi", gambar: Konstruksi },
+  { id: 2, nama: "Logistik", gambar: Logistik },
+  { id: 3, nama: "Mining", gambar: Mining },
+  { id: 4, nama: "Realestate", gambar: Realestate },
+  { id: 5, nama: "Retail", gambar: Retail },
+  { id: 6, nama: "Travel", gambar: Travel },
 ];
