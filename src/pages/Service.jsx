@@ -3,7 +3,7 @@ import { listClient } from '../data';
 import FaqSection from "../components/FaqSection";
 import { Services } from "../components/Services";
 import { useState } from "react";
-import Assist from '../components/assist';
+import Assist from '../components/Assist';
 import CalltoAction from '../components/CalltoAction';
 
 export const Service = () => {
