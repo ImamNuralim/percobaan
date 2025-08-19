@@ -25,8 +25,7 @@ const Navbar = () => {
   return (
     <div
       className={`fixed w-full z-50 px-6 py-4 transition-all duration-500 ${showNavbar ? 'top-0' : '-top-24'
-        } bg-white/10 backdrop-blur-md`}
-    >
+        } bg-white/10 backdrop-blur-md`}>
       <div className="flex justify-between items-center">
         {/* Logo */}
         <a href="/" className="h-10">
@@ -37,28 +36,26 @@ const Navbar = () => {
         <ul className="hidden md:flex items-center gap-8 text-white font-medium">
           <li><a href="/" className="hover:underline">Home</a></li>
           <li><a href="/about" className="hover:underline">Tentang</a></li>
-          <li><a href="#proyek" className="hover:underline">Project</a></li>
-          <li><a href="#kontak" className="hover:underline">Kontak</a></li>
+          <li><a href="/service" className="hover:underline">Service</a></li>
+          <li><a href="/project" className="hover:underline">Project</a></li>
         </ul>
 
         {/* Hamburger Button */}
         <button
-  className="md:hidden text-white z-50" // tambahkan z-50 kalau perlu
-  onClick={() => setMenuOpen(!menuOpen)}
->
-  {menuOpen ? <X size={28} /> : <Menu size={28} />}
-</button>
+          className="md:hidden text-white z-50" // tambahkan z-50 kalau perlu
+          onClick={() => setMenuOpen(!menuOpen)}>
+          {menuOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
 
       </div>
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden fixed top-0 left-0 w-full h-screen bg-black/80 backdrop-blur z-40 transform transition-transform duration-300 ${menuOpen ? 'translate-y-0' : '-translate-y-full'
-          }`}
-      >
+        className={`md:hidden fixed top-0 left-0 w-full h-screen bg-black/80 backdrop-blur z-40 transform transition-transform duration-300 ${menuOpen ? 'translate-y-0' : '-translate-y-full'}`}>
         <div className="p-6 flex flex-col gap-6 text-white text-lg mt-20 items-center">
-          <a href="/" onClick={() => setMenuOpen(false)}>Home</a>
-          <a href="/about" onClick={() => setMenuOpen(false)}>Tentang</a>
+          <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
+          <Link to="/about" onClick={() => setMenuOpen(false)}>Tentang</Link>
+          <Link to="/service" onClick={() => setMenuOpen(false)}>Service</Link>
           <a href="#proyek" onClick={() => setMenuOpen(false)}>Project</a>
           <a href="#kontak" onClick={() => setMenuOpen(false)}>Kontak</a>
         </div>

@@ -17,6 +17,8 @@ import {
 } from 'react-router-dom';
 
 import About from './pages/About.jsx';
+import { Service } from './pages/Service.jsx';
+import Project from './pages/Project.jsx';
 
 AOS.init();
 
@@ -26,14 +28,15 @@ createRoot(document.getElementById('root')).render(
       <Preloader />
       <Navbar />
       <div className="overflow-x-hidden">
-      <div className="container mx-auto px-4">
-        
-        <Routes>
-          <Route path="/" element={<App />} />
-          <Route path="/about" element={<About />} />
-        </Routes>
-        <Footer />
-      </div>
+        <div className="container mx-auto px-4">
+          <Routes>
+            <Route path="/" element={<App />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/service" element={<Service />} />
+            <Route path="/project" element={<Project />} />
+          </Routes>
+          <Footer />
+        </div>
       </div>
     </Router>
   </StrictMode>
