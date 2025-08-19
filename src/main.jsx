@@ -24,6 +24,7 @@ AOS.init();
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <BrowserRouter>
     <Router>
       <Preloader />
       <Navbar />
@@ -39,5 +40,6 @@ createRoot(document.getElementById('root')).render(
         </div>
       </div>
     </Router>
+    </BrowserRouter>
   </StrictMode>
 );
