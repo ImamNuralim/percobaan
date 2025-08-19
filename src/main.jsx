@@ -9,6 +9,8 @@ import 'remixicon/fonts/remixicon.css';
 import 'animate.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { BrowserRouter } from "react-router-dom";
+
 
 import {
   BrowserRouter as Router,
