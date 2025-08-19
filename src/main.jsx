@@ -9,14 +9,7 @@ import 'remixicon/fonts/remixicon.css';
 import 'animate.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { BrowserRouter } from "react-router-dom";
-
-
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route
-} from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import About from './pages/About.jsx';
 import { Service } from './pages/Service.jsx';
@@ -27,7 +20,6 @@ AOS.init();
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
-    <Router>
       <Preloader />
       <Navbar />
       <div className="overflow-x-hidden">
@@ -41,7 +33,6 @@ createRoot(document.getElementById('root')).render(
           <Footer />
         </div>
       </div>
-    </Router>
     </BrowserRouter>
   </StrictMode>
 );

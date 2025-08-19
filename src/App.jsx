@@ -2,7 +2,7 @@ import CalltoAction from "./components/CalltoAction";
 import DataImage from "./data";
 import { listClient } from './data';
 import { listBidangUsaha } from "./data"
-
+import { Routes, Route } from "react-router-dom";
 
 
 function App() {
