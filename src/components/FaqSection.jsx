@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Script } from "react-head";
 
 const FaqSection = () => {
     // State untuk mengelola FAQ yang sedang dibuka
@@ -49,8 +48,11 @@ const FaqSection = () => {
     return (
         <>
 
-                <Script type="application/ld+json">
-                    {JSON.stringify({
+            {/* Structured Data (JSON-LD) */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
                         "@context": "https://schema.org",
                         "@type": "FAQPage",
                         "mainEntity": faqs.map((faq) => ({
@@ -61,8 +63,10 @@ const FaqSection = () => {
                                 "text": faq.answer,
                             },
                         })),
-                    })}
-                </Script>
+                    })
+                }}
+            />
+
             <div className=" py-16 bg-[#0c0228] backdrop-blur-md w-screen -ml-[50vw] -mr-[50vw] relative left-1/2 right-1/2 overflow-hidden" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" data-aos-once="true">
 
                 <div className="container mx-auto px-6 sm:px-12 md:px-24 justify-items-center">

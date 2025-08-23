@@ -3,7 +3,7 @@ import { listProyek } from '../data';
 import { IoArrowForward, IoArrowBack } from "react-icons/io5";
 import CalltoAction from "../components/CalltoAction";
 import "aos/dist/aos.css";
-import { Title, Meta, Script } from "react-head";
+import { Title, Meta } from "react-head";
 
 const Project = () => {
 
@@ -63,19 +63,22 @@ const Project = () => {
                     <Meta name="twitter:image" content="https://mojofolks.com/assets/img/programmer.webp.webp" />
 
                     {/* Structured Data (JSON-LD) */}
-                    <Script type="application/ld+json">
-                        {JSON.stringify({
-                            "@context": "https://schema.org",
-                            "@type": "CreativeWork",
-                            "name": "Portofolio Project Mojo Folks",
-                            "url": "https://mojofolks.com/project",
-                            "creator": {
-                                "@type": "Organization",
-                                "name": "Mojo Folks"
-                            },
-                            "description": "Lihat berbagai project website dan solusi digital yang telah dikembangkan oleh Mojo Folks di NTB."
-                        })}
-                    </Script>
+                    <script
+                        type="application/ld+json"
+                        dangerouslySetInnerHTML={{
+                            __html: JSON.stringify({
+                                "@context": "https://schema.org",
+                                "@type": "CreativeWork",
+                                "name": "Portofolio Project Mojo Folks",
+                                "url": "https://mojofolks.com/project",
+                                "creator": {
+                                    "@type": "Organization",
+                                    "name": "Mojo Folks"
+                                },
+                                "description": "Lihat berbagai project website dan solusi digital yang telah dikembangkan oleh Mojo Folks di NTB."
+                            })
+                        }}
+                    />
                     <div className="bg-[#0d082d] text-white py-20 sm:pt- sm:mb-2 md:py-35 w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] md:pt-36 md:mb-20">
                         <div className="container mx-auto px-6 sm:px-5 md:px-1 lg:px-20 flex flex-col md:flex-row items-center justify-between">
                             <div className="absolute inset-0">

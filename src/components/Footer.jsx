@@ -19,7 +19,7 @@ export const Footer = () => {
             </p>
             {/* LinkedIn Icon */}
             <a href="#" className="inline-block p-1 border border-gray-500 ">
-              <i class="ri-linkedin-box-line text-4xl"></i>
+              <i className="ri-linkedin-box-line text-4xl"></i>
             </a>
             
           </div>

@@ -4,8 +4,7 @@ import FaqSection from "../components/FaqSection";
 import { Services } from "../components/Services";
 import { useState } from "react";
 import CalltoAction from '../components/CalltoAction';
-import { Title, Meta, Script } from "react-head";
-import Assist from '../components/assist';
+import { Title, Meta } from "react-head";
 
 
 
@@ -34,24 +33,28 @@ export const Service = () => {
       <Meta name="twitter:image" content="https://mojofolks.com/assets/img/grow-business.webp" />
 
       {/* Structured Data (JSON-LD) */}
-      <Script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Service",
-          "serviceType": "Website Development & IT Consulting",
-          "provider": {
-            "@type": "Organization",
-            "name": "Mojo Folks",
-            "url": "https://mojofolks.com",
-            "logo": "https://mojofolks.com/assets/img/software-development-team.webp"
-          },
-          "areaServed": {
-            "@type": "Place",
-            "name": "Mataram, Bima, Lombok, Nusa Tenggara Barat"
-          },
-          "description": "Mojo Folks menyediakan layanan pembuatan website dan IT consulting untuk membantu bisnis tumbuh dengan solusi digital."
-        })}
-      </Script>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "serviceType": "Website Development & IT Consulting",
+            "provider": {
+              "@type": "Organization",
+              "name": "Mojo Folks",
+              "url": "https://mojofolks.com",
+              "logo": "https://mojofolks.com/assets/img/software-development-team.webp"
+            },
+            "areaServed": {
+              "@type": "Place",
+              "name": "Mataram, Bima, Lombok, Nusa Tenggara Barat"
+            },
+            "description": "Mojo Folks menyediakan layanan pembuatan website dan IT consulting untuk membantu bisnis tumbuh dengan solusi digital."
+          })
+        }}
+      />
+
       <div className="bg-[#070920] text-white py-20 sm:mb-10 md:py-35 w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] md:pt-36 md:mb-20">
         <div className="container mx-auto px-6 sm:px-5 md:px-1 lg:px-20 flex flex-col md:flex-row items-center justify-between">
 

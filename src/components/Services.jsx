@@ -1,17 +1,20 @@
 import React from 'react'
-import { Title, Meta, Script } from "react-head";
+import { Title, Meta } from "react-head";
 
 export const Services = () => {
     return (
         <>
 
-                <Title>Layanan Kami - Mojo Folks</Title>
-                <Meta
-                    name="description"
-                    content="Mojo Folks menyediakan layanan Web Development, Branding, SEO, dan IT Consulting di Mataram & Lombok."
-                />
-                <Script type="application/ld+json">
-                    {JSON.stringify({
+            <Title>Layanan Kami - Mojo Folks</Title>
+            <Meta
+                name="description"
+                content="Mojo Folks menyediakan layanan Web Development, Branding, SEO, dan IT Consulting di Mataram & Lombok."
+            />
+            {/* Structured Data (JSON-LD) */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
                         "@context": "https://schema.org",
                         "@type": "Service",
                         "serviceType": "Digital Solutions",
@@ -23,8 +26,10 @@ export const Services = () => {
                         },
                         "areaServed": "Mataram, Lombok, Bima",
                         "description": "Mojo Folks menyediakan Web Development, Branding, SEO, dan IT Consulting."
-                    })}
-                </Script>
+                    })
+                }}
+            />
+
             <div className="bg-white py-20 w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
                 <div className="container mx-auto px-5 sm:px-6 lg:px-15 xl:px-25">
                     {/* Header Section */}

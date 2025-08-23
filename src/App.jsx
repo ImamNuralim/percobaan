@@ -3,7 +3,7 @@ import DataImage from "./data";
 import { listClient } from './data';
 import { listBidangUsaha } from "./data"
 import { Link } from 'react-router-dom';
-import { Title, Meta, Script } from "react-head";
+import { Title, Meta } from "react-head";
 
 
 
@@ -11,28 +11,30 @@ function App() {
 
   return (
     <>
-      
-        {/* SEO */}
-        <Title>Mojo Folks - IT Agency</Title>
-        <Meta name="description" content="Layanan kreatif Mojo Folks untuk membantu bisnis Anda tumbuh dengan solusi digital." />
-        <Meta name="keywords" content="Website Developer Mataram, IT Consultant Mataram, Website Developer Lombok, IT Agency NTB, Jasa Pembuatan Website Mataram, Mojo Folks" />
 
-        {/* Open Graph (FB, WhatsApp, LinkedIn) */}
-        <Meta property="og:title" content="Mojo Folks - IT Agency" />
-        <Meta property="og:description" content="Layanan kreatif Mojo Folks untuk membantu bisnis Anda tumbuh." />
-        <Meta property="og:image" content="https://mojofolks.com/assets/img/programmer.webp.webp" />
-        <Meta property="og:url" content="https://mojofolks.com/project" />
-        <Meta property="og:type" content="website" />
+      {/* SEO */}
+      <Title>Mojo Folks - IT Agency</Title>
+      <Meta name="description" content="Layanan kreatif Mojo Folks untuk membantu bisnis Anda tumbuh dengan solusi digital." />
+      <Meta name="keywords" content="Website Developer Mataram, IT Consultant Mataram, Website Developer Lombok, IT Agency NTB, Jasa Pembuatan Website Mataram, Mojo Folks" />
 
-        {/* Twitter Card */}
-        <Meta name="twitter:card" content="summary_large_image" />
-        <Meta name="twitter:title" content="Mojo Folks - Profesional IT Agency" />
-        <Meta name="twitter:description" content="Solusi digital kreatif untuk bisnis Anda. Website developer dan IT consultant di Lombok & Bima." />
-        <Meta name="twitter:image" content="https://mojofolks.com/assets/img/programmer.webp.webp" />
+      {/* Open Graph (FB, WhatsApp, LinkedIn) */}
+      <Meta property="og:title" content="Mojo Folks - IT Agency" />
+      <Meta property="og:description" content="Layanan kreatif Mojo Folks untuk membantu bisnis Anda tumbuh." />
+      <Meta property="og:image" content="https://mojofolks.com/assets/img/programmer.webp.webp" />
+      <Meta property="og:url" content="https://mojofolks.com/project" />
+      <Meta property="og:type" content="website" />
 
-        {/* Structured Data (JSON-LD) */}
-        <Script type="application/ld+json">
-          {JSON.stringify({
+      {/* Twitter Card */}
+      <Meta name="twitter:card" content="summary_large_image" />
+      <Meta name="twitter:title" content="Mojo Folks - Profesional IT Agency" />
+      <Meta name="twitter:description" content="Solusi digital kreatif untuk bisnis Anda. Website developer dan IT consultant di Lombok & Bima." />
+      <Meta name="twitter:image" content="https://mojofolks.com/assets/img/programmer.webp.webp" />
+
+      {/* Structured Data (JSON-LD) */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
             "name": "Mojo Folks",
@@ -50,8 +52,10 @@ function App() {
               "areaServed": "ID",
               "availableLanguage": ["Indonesian", "English"]
             }
-          })}
-        </Script>
+          })
+        }}
+      />
+
 
       <div className="bg-[#070920] text-white py-20 sm:mb-10 md:py-35 w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] md:pt-36 md:mb-20">
         <div className="container mx-auto px-6 sm:px-5 md:px-1 lg:px-20 flex flex-col md:flex-row items-center justify-between">
@@ -160,14 +164,14 @@ function App() {
           <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-r from-blue-500 to-cyan-500 blur-[150px] opacity-30"></div>
         </div>
         <div className="max-w-7xl mx-auto px-4 md:p-4">
-          <div class="flex flex-col lg:flex-row gap-8 mb-8 lg:mb-16" data-aos="fade-up"
+          <div className="flex flex-col lg:flex-row gap-8 mb-8 lg:mb-16" data-aos="fade-up"
             data-aos-delay="6000"
             data-aos-once="true">
-            <div class="w-full md:w-2/3">
-              <h2 class="text-3xl md:text-5xl font-bold text-white leading-tight">
+            <div className="w-full md:w-2/3">
+              <h2 className="text-3xl md:text-5xl font-bold text-white leading-tight">
                 Kami Melayani Berbagai Sektor Ekonomi
               </h2>
-              <p class="text-white text-base pt-3">
+              <p className="text-white text-base pt-3">
                 Melayani berbagai sektor ekonomi dengan solusi digital yang dirancang untuk mendukung pertumbuhan dan kesuksesan bisnis.
               </p>
             </div>
