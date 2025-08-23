@@ -4,7 +4,7 @@ import { } from "module";
 import CalltoAction from '../components/CalltoAction';
 import { Link } from 'react-router-dom';
 import { useState } from "react";
-import { Helmet } from "react-helmet-async";
+import { Title, Meta, Script, Link } from "react-head";
 
 
 const About = () => {
@@ -13,27 +13,26 @@ const About = () => {
   return (
     <>
 
-      <Helmet>
         {/* SEO */}
-        <title>Tentang Kami - Mojo Folks</title>
-        <meta name="description" content="Mojo Folks adalah IT agency dan website developer profesional yang berbasis di Bima dan Mataram. Kami membantu bisnis tumbuh dengan solusi kreatif digital." />
-        <meta name="keywords" content="Tentang Mojo Folks, Digital Agency Mataram, IT Consultant Lombok, Website Developer Bima, IT Agency NTB" />
+        <Title>Tentang Kami - Mojo Folks</Title>
+        <Meta name="description" content="Mojo Folks adalah IT agency dan website developer profesional yang berbasis di Bima dan Mataram. Kami membantu bisnis tumbuh dengan solusi kreatif digital." />
+        <Meta name="keywords" content="Tentang Mojo Folks, Digital Agency Mataram, IT Consultant Lombok, Website Developer Bima, IT Agency NTB" />
 
         {/* Open Graph (FB, WhatsApp, LinkedIn) */}
-        <meta property="og:title" content="Tentang Kami - Mojo Folks Digital Agency" />
-        <meta property="og:description" content="Mojo Folks adalah tim kreatif digital agency di NTB, siap membantu bisnis Anda berkembang." />
-        <meta property="og:image" content="https://mojofolks.com/assets/img/programmer.webp.webp" />
-        <meta property="og:url" content="https://mojofolks.com/project" />
-        <meta property="og:type" content="website" />
+        <Meta property="og:title" content="Tentang Kami - Mojo Folks Digital Agency" />
+        <Meta property="og:description" content="Mojo Folks adalah tim kreatif digital agency di NTB, siap membantu bisnis Anda berkembang." />
+        <Meta property="og:image" content="https://mojofolks.com/assets/img/programmer.webp.webp" />
+        <Meta property="og:url" content="https://mojofolks.com/project" />
+        <Meta property="og:type" content="website" />
 
         {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Tentang Kami - Mojo Folks IT Agency" />
-        <meta name="twitter:description" content="Kenali tim Mojo Folks, IT consultant dan website developer di NTB." />
-        <meta name="twitter:image" content="https://mojofolks.com/assets/img/programmer.webp.webp" />
+        <Meta name="twitter:card" content="summary_large_image" />
+        <Meta name="twitter:title" content="Tentang Kami - Mojo Folks IT Agency" />
+        <Meta name="twitter:description" content="Kenali tim Mojo Folks, IT consultant dan website developer di NTB." />
+        <Meta name="twitter:image" content="https://mojofolks.com/assets/img/programmer.webp.webp" />
 
         {/* Structured Data (JSON-LD) */}
-        <script type="application/ld+json">
+        <Script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "AboutPage",
@@ -46,9 +45,8 @@ const About = () => {
               "url": "https://mojofolks.com"
             }
           })}
-        </script>
+        </Script>
 
-      </Helmet>
       <div className="bg-[#070920] text-white py-20 sm:mb-10 md:py-89 w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] md:pt-36 md:mb-20">
         <div className="container mx-auto px-6 sm:px-5 md:px-1 lg:px-20 flex flex-col md:flex-row items-center justify-between">
           <div className="absolute inset-0">

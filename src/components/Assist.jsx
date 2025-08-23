@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from "react";
-import { Helmet } from "react-helmet-async";
+import {  Script } from "react-head";
 
 const Assist = () => {
     const [openIndex, setOpenIndex] = useState(null);
@@ -52,11 +52,10 @@ const Assist = () => {
     return (
         <>
 
-            <Helmet>
-                <script type="application/ld+json">
+            
+                <Script type="application/ld+json">
                     {JSON.stringify(howToSchema)}
-                </script>
-            </Helmet>
+                </Script>
             <div className="bg-gray-900 text-white py-20 px-5 w-screen -ml-[50vw] -mr-[50vw] relative left-1/2 right-1/2 overflow-hidden ">
                 <div className="container mx-auto max-w-7xl px-4">
                     {/* Judu    l Bagian */}

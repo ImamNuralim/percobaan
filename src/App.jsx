@@ -3,7 +3,7 @@ import DataImage from "./data";
 import { listClient } from './data';
 import { listBidangUsaha } from "./data"
 import { Link } from 'react-router-dom';
-import { Helmet } from "react-helmet-async";
+import { Title, Meta, Link, Script } from "react-head";
 
 
 
@@ -11,27 +11,27 @@ function App() {
 
   return (
     <>
-      <Helmet>
+      
         {/* SEO */}
-        <title>Mojo Folks - IT Agency</title>
-        <meta name="description" content="Layanan kreatif Mojo Folks untuk membantu bisnis Anda tumbuh dengan solusi digital." />
-        <meta name="keywords" content="Website Developer Mataram, IT Consultant Mataram, Website Developer Lombok, IT Agency NTB, Jasa Pembuatan Website Mataram, Mojo Folks" />
+        <Title>Mojo Folks - IT Agency</Title>
+        <Meta name="description" content="Layanan kreatif Mojo Folks untuk membantu bisnis Anda tumbuh dengan solusi digital." />
+        <Meta name="keywords" content="Website Developer Mataram, IT Consultant Mataram, Website Developer Lombok, IT Agency NTB, Jasa Pembuatan Website Mataram, Mojo Folks" />
 
         {/* Open Graph (FB, WhatsApp, LinkedIn) */}
-        <meta property="og:title" content="Mojo Folks - IT Agency" />
-        <meta property="og:description" content="Layanan kreatif Mojo Folks untuk membantu bisnis Anda tumbuh." />
-        <meta property="og:image" content="https://mojofolks.com/assets/img/programmer.webp.webp" />
-        <meta property="og:url" content="https://mojofolks.com/project" />
-        <meta property="og:type" content="website" />
+        <Meta property="og:title" content="Mojo Folks - IT Agency" />
+        <Meta property="og:description" content="Layanan kreatif Mojo Folks untuk membantu bisnis Anda tumbuh." />
+        <Meta property="og:image" content="https://mojofolks.com/assets/img/programmer.webp.webp" />
+        <Meta property="og:url" content="https://mojofolks.com/project" />
+        <Meta property="og:type" content="website" />
 
         {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Mojo Folks - Profesional IT Agency" />
-        <meta name="twitter:description" content="Solusi digital kreatif untuk bisnis Anda. Website developer dan IT consultant di Lombok & Bima." />
-        <meta name="twitter:image" content="https://mojofolks.com/assets/img/programmer.webp.webp" />
+        <Meta name="twitter:card" content="summary_large_image" />
+        <Meta name="twitter:title" content="Mojo Folks - Profesional IT Agency" />
+        <Meta name="twitter:description" content="Solusi digital kreatif untuk bisnis Anda. Website developer dan IT consultant di Lombok & Bima." />
+        <Meta name="twitter:image" content="https://mojofolks.com/assets/img/programmer.webp.webp" />
 
         {/* Structured Data (JSON-LD) */}
-        <script type="application/ld+json">
+        <Script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
@@ -45,15 +45,14 @@ function App() {
             ],
             "contactPoint": {
               "@type": "ContactPoint",
-              "telephone": "+62-812-xxxx-xxxx",
+              "telephone": "+62-813-3796-1020",
               "contactType": "Customer Service",
               "areaServed": "ID",
               "availableLanguage": ["Indonesian", "English"]
             }
           })}
-        </script>
+        </Script>
 
-      </Helmet>
       <div className="bg-[#070920] text-white py-20 sm:mb-10 md:py-35 w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] md:pt-36 md:mb-20">
         <div className="container mx-auto px-6 sm:px-5 md:px-1 lg:px-20 flex flex-col md:flex-row items-center justify-between">
           <div className="absolute inset-0">

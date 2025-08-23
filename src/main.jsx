@@ -13,12 +13,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import About from './pages/About.jsx';
 import { Service } from './pages/Service.jsx';
 import Project from './pages/Project.jsx';
-import { HelmetProvider } from "react-helmet-async";
+import { HeadProvider } from "react-head";  // ⬅️ ganti ini
+
 AOS.init();
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <HelmetProvider>
+    <HeadProvider>   {/* ⬅️ ganti HelmetProvider ke HeadProvider */}
       <BrowserRouter>
         <Preloader />
         <Navbar />
@@ -34,6 +35,6 @@ createRoot(document.getElementById('root')).render(
           </div>
         </div>
       </BrowserRouter>
-    </HelmetProvider>
+    </HeadProvider>
   </StrictMode>
 );
