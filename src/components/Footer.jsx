@@ -35,7 +35,7 @@ export const Footer = () => {
                 <a href="#" className="text-gray-400 hover:text-gray-300">info@mojofolks.com</a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-gray-300">+62 813-3796-1020</a>
+                <a href="https://wa.me/6281337961020?text=Halloo%20Mojo%20Folks:)" className="text-gray-400 hover:text-gray-300">+62 813-3796-1020</a>
               </li>
               
             </ul>

@@ -111,7 +111,7 @@ export const Service = () => {
           
             <div className="mt-8 text-left">
             <a
-              href="/services"
+              href="https://wa.me/6281337961020?text=Halloo%20Mojo%20Folks:)"
               className="inline-block px-2 py-2 border bg-blue-600 text-white hover:bg-blue-500 transition-colors">
               Explore Services
             </a>

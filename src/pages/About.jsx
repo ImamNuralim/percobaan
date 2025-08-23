@@ -139,14 +139,14 @@ const About = () => {
       {/* Core Values */}
 
       <div className="xl:mt-0 md:mt-25 grid grid-cols-1 md:grid-cols-2 gap-0 w-screen -ml-[50vw] -mr-[50vw] relative left-1/2 right-1/2 overflow-hidden">
-        <div className="bg-blue-900 h-[400px] md:h-auto overflow-hidden relative" data-aos="fade-left" data-aos-duration="800" data-aos-delay="400" data-aos-once="true">
+        <div className="bg-blue-900 h-[400px] md:h-auto overflow-hidden relative" data-aos="fade-right" data-aos-duration="800" data-aos-delay="400" data-aos-once="true">
           <img
             src="/assets/img/kreatifteam.webp"
             alt="Abstract technology illustration"
             className="w-full h-full object-cover opacity-80" />
         </div>
 
-        <div className="bg-white p-8 md:p-16 flex flex-col justify-center" data-aos="fade-right" data-aos-duration="800" data-aos-delay="400" data-aos-once="true">
+        <div className="bg-white p-8 md:p-16 flex flex-col justify-center" data-aos="fade-left" data-aos-duration="800" data-aos-delay="400" data-aos-once="true">
           <h2 className="text-4xl font-bold text-gray-800 leading-tight">
             Fondasi Kreatif untuk <br />Masa Depan
           </h2>
@@ -175,20 +175,12 @@ const About = () => {
               <span className="font-medium text-gray-700">Integritas</span>
             </div>
           </div>
+          
           <div className="mt-8 text-left">
-            <Link to="/service" className="flex items-centerfont-semibold py-2 border bg-blue-600 text-white hover:bg-blue-500 transition-colors">
+            <Link to="/service" className="inline-block px-2 py-2 border bg-blue-600 text-white hover:bg-blue-500 transition-colors">
               More Service
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
-                <path
-                  fillRule="evenodd"
-                  d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                  clipRule="evenodd"
-                />
-              </svg>
             </Link>
-
           </div>
-
         </div>
       </div>
       {/* Tools */}
