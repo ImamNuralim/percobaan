@@ -39,14 +39,13 @@ const Assist = () => {
         <>
             <div className="bg-gray-900 text-white py-20 px-5 w-screen -ml-[50vw] -mr-[50vw] relative left-1/2 right-1/2 overflow-hidden ">
                 <div className="container mx-auto max-w-7xl px-4">
-                    {/* Judul Bagian */}
+                    {/* Judu    l Bagian */}
                     <div className="mb-12">
                         <h2
-                            className="text-4xl md:text-5xl font-bold
+                            className="text-4xl md:text-5xl font-bold w-200
               [@media(min-width:400px)_and_(max-width:539px)]:text-[28px]"
-                        >
-                            How we can assist <br /> your business
-                            
+                        > Langkah Kami dalam Membantu Bisnis Anda
+
                         </h2>
                         <p className="pt-5 w-200">Kami mendampingi setiap langkah bisnis Anda dengan pendekatan yang terstruktur, mulai dari perencanaan hingga implementasi, agar solusi yang dihadirkan benar-benar sesuai kebutuhan.</p>
                     </div>
@@ -57,23 +56,27 @@ const Assist = () => {
                             <div
                                 key={step.id}
                                 className={`relative col-span-1
-                        ${index === 1 ? "[@media(min-width:400px)]:mt-20 [@media(min-width:759px)]:mt-15 md:mt-24" : ""}
-                        ${index === 2 ? "[@media(min-width:400px)]:mt-[-4.5rem] [@media(min-width:759px)]:mt-30 md:mt-48" : ""}
-                        ${index === 3 ? "[@media(min-width:400px)]:mt-2 [@media(min-width:759px)]:-mt-29 md:-mt-40" : ""}
-                        ${index === 4 ? "[@media(min-width:400px)]:mt-[-4.5rem] [@media(min-width:759px)]:-mt-14 md:-mt-10" : ""}
-                        ${index === 5 ? "[@media(min-width:400px)]:mt-2 [@media(min-width:759px)]:mt-1 md:mt-10" : ""}`
+    ${index === 1 ? "[@media(min-width:400px)]:mt-20 [@media(min-width:759px)]:mt-15 md:mt-24" : ""}
+    ${index === 2 ? "[@media(min-width:400px)]:mt-[-4.5rem] [@media(min-width:759px)]:mt-30 md:mt-48" : ""}
+    ${index === 3 ? "[@media(min-width:400px)]:mt-2 [@media(min-width:759px)]:-mt-29 md:-mt-40" : ""}
+    ${index === 4 ? "[@media(min-width:400px)]:mt-[-4.5rem] [@media(min-width:759px)]:-mt-14 md:-mt-10" : ""}
+    ${index === 5 ? "[@media(min-width:400px)]:mt-2 [@media(min-width:759px)]:mt-1 md:mt-10" : ""}`
                                 }
+                                data-aos="fade-up"
+                                data-aos-delay={index * 200}   // delay otomatis
+                                data-aos-duration="800"
+                                data-aos-once="true"
                             >
                                 <div
                                     className={`p-4 md:p-8 aspect-square flex flex-col justify-end relative cursor-pointer transition-all duration-500 
-                        ${openIndex === index ? "bg-white" : step.color}`}
+      ${openIndex === index ? "bg-white" : step.color}`}
                                     onClick={() => toggleBox(index)}
                                 >
                                     {/* Angka pojok atas */}
                                     <p
                                         className={`text-lg md:text-xl absolute top-4 left-4 transition-all duration-500
-                        [@media(min-width:400px)_and_(max-width:539px)]:text-[10px]
-                        ${openIndex === index ? "text-blue-600" : "text-gray-200"}`}
+        [@media(min-width:400px)_and_(max-width:539px)]:text-[10px]
+        ${openIndex === index ? "text-blue-600" : "text-gray-200"}`}
                                     >
                                         {step.id}
                                     </p>
@@ -81,8 +84,8 @@ const Assist = () => {
                                     {/* Judul */}
                                     <h3
                                         className={`text-xl md:text-lg font-semibold transition-all absolute bottom-4 left-4 duration-500
-            [@media(min-width:400px)_and_(max-width:539px)]:text-[12px]
-            ${openIndex === index ? "text-blue-600" : "text-white"}`}
+        [@media(min-width:400px)_and_(max-width:539px)]:text-[12px]
+        ${openIndex === index ? "text-blue-600" : "text-white"}`}
                                     >
                                         {step.title}
                                     </h3>
@@ -90,13 +93,14 @@ const Assist = () => {
                                     {/* Penjelasan */}
                                     <p
                                         className={`pt-4 px-2 text-gray-700 transition-all duration-500 absolute bottom-12 left-2 overflow-hidden
-            [@media(min-width:400px)_and_(max-width:539px)]:text-[10px] [@media(min-width:400px)_and_(max-width:539px)]:bottom-8
-            ${openIndex === index ? "opacity-100 max-h-40" : "opacity-0 max-h-0"}`}
+        [@media(min-width:400px)_and_(max-width:539px)]:text-[10px] [@media(min-width:400px)_and_(max-width:539px)]:bottom-8
+        ${openIndex === index ? "opacity-100 max-h-40" : "opacity-0 max-h-0"}`}
                                     >
                                         {step.desc}
                                     </p>
                                 </div>
                             </div>
+
                         ))}
                     </div>
 

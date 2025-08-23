@@ -25,7 +25,7 @@ const Navbar = () => {
   return (
     <div
       className={`fixed w-full z-50 px-6 py-4 transition-all duration-500 ${showNavbar ? 'top-0' : '-top-24'
-        } bg-white/10 backdrop-blur-md`}>
+        } bg-black/30 backdrop-blur-md`}>
       <div className="flex justify-between items-center">
         {/* Logo */}
         <a href="/" className="h-10">
@@ -34,10 +34,10 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex items-center gap-8 text-white font-medium">
-          <li><a href="/" className="hover:underline">Home</a></li>
-          <li><a href="/about" className="hover:underline">Tentang</a></li>
-          <li><a href="/service" className="hover:underline">Service</a></li>
-          <li><a href="/project" className="hover:underline">Project</a></li>
+          <li><Link to="/" className="hover:underline">Home</Link></li>
+          <li><Link to="/about" className="hover:underline">Tentang</Link></li>
+          <li><Link to="/service" className="hover:underline">Service</Link></li>
+          <li><Link to="/project" className="hover:underline">Project</Link></li>
         </ul>
 
         {/* Hamburger Button */}
@@ -56,8 +56,8 @@ const Navbar = () => {
           <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
           <Link to="/about" onClick={() => setMenuOpen(false)}>Tentang</Link>
           <Link to="/service" onClick={() => setMenuOpen(false)}>Service</Link>
-          <a href="#proyek" onClick={() => setMenuOpen(false)}>Project</a>
-          <a href="#kontak" onClick={() => setMenuOpen(false)}>Kontak</a>
+          <Link to="/proyek" onClick={() => setMenuOpen(false)}>Project</Link>
+          <Link to="/kontak" onClick={() => setMenuOpen(false)}>Kontak</Link>
         </div>
       </div>
     </div>

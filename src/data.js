@@ -1,6 +1,6 @@
 
 import MujoFolks from "/assets/img/mujo.png"
-const Image = { MujoFolks};
+const Image = { MujoFolks };
 
 export default Image;
 
@@ -94,7 +94,8 @@ export const listTools = [
     ket: "Design App",
     dad: "1100",
   },
-  { id: 12,
+  {
+    id: 12,
     gambar: Tools12,
     nama: "Wordpress",
     ket: "CMS",
@@ -125,7 +126,8 @@ export const listProyek = [
     waktuPengerjaan: "3 bulan (Januari - Maret 2024)",
     tools: ["Laravel", "Bootstrap", "CSS", "Javascript"],
     client: "PT. Perhitani Kendal",
-    linkProject: "https://example.com/perhitani"
+    linkProject: "https://example.com/perhitani",
+    dad: "100"
   },
   {
     id: 2,
@@ -136,7 +138,8 @@ export const listProyek = [
     waktuPengerjaan: "2.5 bulan (April - Juni 2024)",
     tools: ["Laravel", "Bootstrap", "CSS", "Javascript", "PWA"],
     client: "Teras Ilmu Center",
-    linkProject: "https://example.com/teras-ilmu"
+    linkProject: "https://example.com/teras-ilmu",
+    dad: "200"
   },
   {
     id: 3,
@@ -147,7 +150,8 @@ export const listProyek = [
     waktuPengerjaan: "1 bulan (Juli 2024)",
     tools: ["Wordpress", "Elementor"],
     client: "Fada Tour",
-    linkProject: "https://example.com/fada-tour"
+    linkProject: "https://example.com/fada-tour",
+    dad: "300"
   },
   {
     id: 4,
@@ -158,7 +162,8 @@ export const listProyek = [
     waktuPengerjaan: "2 bulan (Juni - Juli 2024)",
     tools: ["html", "CSS", "Javascript", "Bootstrap", "AOS"],
     client: "Risebloom x UNDIP",
-    linkProject: "https://example.com/risebloom"
+    linkProject: "https://example.com/risebloom",
+    dad: "400"
   },
   {
     id: 5,
@@ -169,7 +174,8 @@ export const listProyek = [
     waktuPengerjaan: "1.5 bulan (September - Oktober 2024)",
     tools: ["Wordpress", "Elementor"],
     client: "Kraton Surakarta",
-    linkProject: "https://example.com/kraton-surakarta"
+    linkProject: "https://example.com/kraton-surakarta",
+    dad: "500"
   },
   {
     id: 6,
@@ -180,7 +186,8 @@ export const listProyek = [
     waktuPengerjaan: "2 minggu (Agustus 2024)",
     tools: ["HTML", "CSS", "Js"],
     client: "Dphilia Cafe & Resto",
-    linkProject: "https://example.com/dphilia"
+    linkProject: "https://example.com/dphilia",
+    dad: "600"
   },
   {
     id: 7,
@@ -191,7 +198,8 @@ export const listProyek = [
     waktuPengerjaan: "3 minggu (Juli 2024)",
     tools: ["Wordpress", "Elementor"],
     client: "CV Nuansa Gis Consultan",
-    linkProject: "https://example.com/nuansa-gis"
+    linkProject: "https://example.com/nuansa-gis",
+    dad: "700"
   },
   {
     id: 8,
@@ -202,7 +210,8 @@ export const listProyek = [
     waktuPengerjaan: "2.5 bulan (April - Juni 2024)",
     tools: ["HTML", "CSS", "Js"],
     client: "PT. Cerindo Corp",
-    linkProject: "https://example.com/cerindo"
+    linkProject: "https://example.com/cerindo",
+    dad: "800"
   },
   {
     id: 9,
@@ -213,7 +222,8 @@ export const listProyek = [
     waktuPengerjaan: "2 bulan (Oktober - November 2023)",
     tools: ["HTML", "CSS", "Js", "AOS"],
     client: "PT. GCI",
-    linkProject: "https://example.com/gci"
+    linkProject: "https://example.com/gci",
+    dad: "900"
   },
   {
     id: 10,
@@ -224,7 +234,8 @@ export const listProyek = [
     waktuPengerjaan: "1 bulan (Desember 2023)",
     tools: ["React Js", "Tailwind CSS", "Js", "AOS", "flowbite"],
     client: "Mujo Folks",
-    linkProject: "https://example.com/mujo-folks"
+    linkProject: "https://example.com/mujo-folks",
+    dad: "1000"
   },
   {
     id: 11,
@@ -235,7 +246,8 @@ export const listProyek = [
     waktuPengerjaan: "4 bulan (September - Desember 2023)",
     tools: ["Electron Js", "Js", "Tailwind CSS", "HTML"],
     client: "PT Indocement Tunggal Perkasa",
-    linkProject: "https://example.com/hr-indocement"
+    linkProject: "https://example.com/hr-indocement",
+    dad: "1100"
   },
 ];
 
@@ -271,12 +283,12 @@ import Travel from "/assets/services/travel.webp";
 
 
 export const listBidangUsaha = [
-  { id: 1, nama: "Konstruksi", gambar: Konstruksi },
-  { id: 2, nama: "Logistik", gambar: Logistik },
-  { id: 3, nama: "Mining", gambar: Mining },
-  { id: 4, nama: "Realestate", gambar: Realestate },
-  { id: 5, nama: "Travel", gambar: Travel },
-  { id: 6, nama: "End More", gambar:  More }, 
+  { id: 1, nama: "Konstruksi", dad:"100", gambar: Konstruksi },
+  { id: 2, nama: "Logistik", dad:"200", gambar: Logistik },
+  { id: 3, nama: "Mining", dad:"300", gambar: Mining },
+  { id: 4, nama: "Realestate", dad:"400", gambar: Realestate },
+  { id: 5, nama: "Travel", dad:"500", gambar: Travel },
+  { id: 6, nama: "End More", dad:"600", gambar: More },
 ];
 
 

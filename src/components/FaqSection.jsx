@@ -46,15 +46,15 @@ const FaqSection = () => {
     };
 
     return (
-        <div className=" py-16 bg-[#0c0228] backdrop-blur-md w-screen -ml-[50vw] -mr-[50vw] relative left-1/2 right-1/2 overflow-hidden">
+        <div className=" py-16 bg-[#0c0228] backdrop-blur-md w-screen -ml-[50vw] -mr-[50vw] relative left-1/2 right-1/2 overflow-hidden" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" data-aos-once="true">
         
             <div className="container mx-auto px-6 sm:px-12 md:px-24 justify-items-center">
                 <div className="text-center mb-12">
                     <p className="text-sm uppercase tracking-widest text-gray-300 mb-2">
-                        IT Agency
+                        FAQ
                     </p>
-                    <h2 className="text-4xl md:text-5xl font-bold text-white">
-                        Frequently asked question
+                    <h2 className="text-2xl md:text-4xl font-bold text-white">
+                        Pertanyaan yang Sering Diajukan
                     </h2>
                 </div>
 

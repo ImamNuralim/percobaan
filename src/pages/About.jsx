@@ -1,23 +1,24 @@
 import React from 'react'
-import { listClient } from '../data'; // sesuaikan path-nya ya
-import { listProyek } from '../data';
-import { listTools } from '../data';
+import { listClient } from '../data';
 import { } from "module";
-import FaqSection from "../components/FaqSection";
 import CalltoAction from '../components/CalltoAction';
+import { Link } from 'react-router-dom';
+import { useState } from "react";
 
 
 
 const About = () => {
+  const [activeIndex, setActiveIndex] = useState(null);
+  
   return (
     <>
 
-      
+
       <div className="bg-[#070920] text-white py-20 sm:mb-10 md:py-89 w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] md:pt-36 md:mb-20">
         <div className="container mx-auto px-6 sm:px-5 md:px-1 lg:px-20 flex flex-col md:flex-row items-center justify-between">
           <div className="absolute inset-0">
           </div>
-          <div className="md:w-1/2 mb-10 md:mb-0 md:pr-12">
+          <div className="md:w-1/2 mb-10 md:mb-0 md:pr-12" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
             <p className="text-sm uppercase tracking-widest text-light-blue mb-4">
               ABOUT US
             </p>
@@ -32,21 +33,21 @@ const About = () => {
             </p>
           </div>
           <div className="md:w-1/2 justify-center items-center hidden md:flex">
-            <img src="/assets/img/hero-section 3.webp" alt="Hero Image" className="hidden md:block w-[1240px] md:ml-auto animate__animated animate__fadeInUp animate__delay-3s  md:scale-140 pt-2 lg:translate-x-30 filter drop-shadow-[0_35px_60px_#4426F0]" />
+            <img src="/assets/img/hero-section 3.webp" alt="Hero Image" className="hidden md:block w-[1240px] md:ml-auto animate__animated animate__fadeInUp animate__delay-1s  md:scale-140 pt-2 lg:translate-x-30 filter drop-shadow-[0_35px_60px_#4426F0]" />
           </div>
         </div>
       </div>
 
       {/*Tentang Mojo*/}
       <div className="transform md:-translate-y-[15rem] xl:mt-0 md:mt-25 grid grid-cols-1 md:grid-cols-2 gap-0 w-screen -ml-[50vw] -mr-[50vw] relative left-1/2 right-1/2 overflow-hidden">
-        <div className="bg-blue-900 h-[400px] md:h-auto overflow-hidden relative">
+        <div className="bg-blue-900 h-[400px] md:h-auto overflow-hidden relative" data-aos="fade-right" data-aos-duration="800" data-aos-delay="400" data-aos-once="true">
           <img
             src="/assets/img/teamwork.webp"
             alt="Abstract technology illustration"
             className="w-full h-full object-cover opacity-80" />
         </div>
 
-        <div className="bg-white p-8 md:p-16 flex flex-col justify-center">
+        <div className="bg-white p-8 md:p-16 flex flex-col justify-center" data-aos="fade-left" data-aos-duration="800" data-aos-delay="400" data-aos-once="true">
           <h2 className="text-3xl md:text-5xl font-bold text-gray-800 leading-tight mb-4">
             Mojo Folks
           </h2>
@@ -58,69 +59,94 @@ const About = () => {
 
       {/* Our Team */}
 
-      <div className="bg-zinc-900 relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen px-4 sm:px-12 lg:px-24 py-15">
-        <div className="container mx-auto px-6 sm:px-5 md:px-15">
-          <div className="container mx-auto px-4">
-            {/* Header Section */}
-            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-12">
-              <div className="sm:w-2/3 mb-6 sm:mb-0">
-                <div className="flex items-baseline space-x-2 mb-2">
-                  <h2 className="text-3xl font-bold text-white">The People Behind the Vision</h2>
-                </div>
-                <p className="text-base text-gray-300 max-w-2xl">
-                  Kami adalah tim kreatif dan berdedikasi yang bekerja sama untuk mengubah ide menjadi solusi nyata. Dengan keahlian dan semangat kolaborasi, kami memastikan setiap proyek mencapai hasil terbaik.
-                </p>
+      <div className="bg-zinc-900 -mt-50 relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen px-4 sm:px-12 lg:px-24 py-15">
+      <div className="container mx-auto px-6 sm:px-5 md:px-15">
+        <div className="container mx-auto px-4">
+          {/* Header Section */}
+          <div
+            className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-12"
+            data-aos="fade-up"
+            data-aos-duration="800"
+            data-aos-delay="400"
+            data-aos-once="true"
+          >
+            <div className="sm:w-2/3 mb-6 sm:mb-0">
+              <div className="flex items-baseline space-x-2 mb-2">
+                <h2 className="text-3xl font-bold text-white">
+                  Tim di Balik Perjalanan Kami
+                </h2>
               </div>
+              <p className="text-base text-gray-300 max-w-2xl">
+                Kami adalah tim kreatif dan berdedikasi yang bekerja sama untuk
+                mengubah ide menjadi solusi nyata. Dengan keahlian dan semangat
+                kolaborasi, kami memastikan setiap proyek mencapai hasil terbaik.
+              </p>
             </div>
+          </div>
 
-            {/* Grid jadi slider di mobile */}
-            <div className="flex gap-6 overflow-x-auto snap-x snap-mandatory sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:overflow-visible">
-              {[
-                {
-                  src: "/assets/img/imam.webp",
-                  name: "Imam Nuralim",
-                  role: "Fullstack Developer",
-                },
-                {
-                  src: "/assets/img/anhar.webp",
-                  name: "Anhar Aldervaro",
-                  role: "Backend Developer",
-                },
-                {
-                  src: "/assets/img/mark.webp",
-                  name: "Marvel Shivan Mark Gesang",
-                  role: "Account Executive",
-                },
-              ].map((person, index) => (
-                <div
-                  key={index}
-                  className="flex-shrink-0 w-full snap-start flex flex-col sm:w-auto"
-                >
-                  <img
-                    src={person.src}
-                    alt={person.name}
-                    className="w-full aspect-square object-cover mb-4"
-                  />
-                  <h3 className="text-xl font-bold text-white">{person.name}</h3>
-                  <p className="text-gray-300">{person.role}</p>
-                </div>
-              ))}
-            </div>
+          {/* Grid jadi slider di mobile */}
+          <div className="flex gap-6 overflow-x-auto snap-x snap-mandatory sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:overflow-visible">
+            {[
+              {
+                src: "/assets/img/imam.webp",
+                name: "Imam Nuralim",
+                role: "Fullstack Developer",
+                dad: "700",
+              },
+              {
+                src: "/assets/img/anhar.webp",
+                name: "Anhar Aldervaro",
+                role: "Backend Developer",
+                dad: "900",
+              },
+              {
+                src: "/assets/img/mark.webp",
+                name: "Marvel Shivan Mark Gesang",
+                role: "Account Executive",
+                dad: "1100",
+              },
+            ].map((person, index) => (
+              <div
+                key={index}
+                className="flex-shrink-0 w-full snap-start flex flex-col sm:w-auto cursor-pointer"
+                data-aos="fade-up"
+                data-aos-delay={person.dad}
+                data-aos-duration="1000"
+                data-aos-once="true"
+                onClick={() =>
+                  setActiveIndex(activeIndex === index ? null : index)
+                }
+              >
+                <img
+                  src={person.src}
+                  alt={person.name}
+                  className={`w-full aspect-square object-cover mb-4 transition-all duration-500 
+                    ${
+                      activeIndex === index
+                        ? "grayscale-0"
+                        : "grayscale hover:grayscale-0"
+                    }`}
+                />
+                <h3 className="text-xl font-bold text-white">{person.name}</h3>
+                <p className="text-gray-300">{person.role}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
+    </div>
 
       {/* Core Values */}
 
       <div className="xl:mt-0 md:mt-25 grid grid-cols-1 md:grid-cols-2 gap-0 w-screen -ml-[50vw] -mr-[50vw] relative left-1/2 right-1/2 overflow-hidden">
-        <div className="bg-blue-900 h-[400px] md:h-auto overflow-hidden relative">
+        <div className="bg-blue-900 h-[400px] md:h-auto overflow-hidden relative" data-aos="fade-left" data-aos-duration="800" data-aos-delay="400" data-aos-once="true">
           <img
             src="/assets/img/kreatifteam.webp"
             alt="Abstract technology illustration"
             className="w-full h-full object-cover opacity-80" />
         </div>
 
-        <div className="bg-white p-8 md:p-16 flex flex-col justify-center">
+        <div className="bg-white p-8 md:p-16 flex flex-col justify-center" data-aos="fade-right" data-aos-duration="800" data-aos-delay="400" data-aos-once="true">
           <h2 className="text-4xl font-bold text-gray-800 leading-tight">
             Fondasi Kreatif untuk <br />Masa Depan
           </h2>
@@ -150,11 +176,17 @@ const About = () => {
             </div>
           </div>
           <div className="mt-8 text-left">
-            <a
-              href="/services"
-              className="inline-block px-4 py-2 border bg-blue-600 text-white hover:bg-blue-500 transition-colors">
-              Explore Services
-            </a>
+            <Link to="/service" className="flex items-centerfont-semibold py-2 border bg-blue-600 text-white hover:bg-blue-500 transition-colors">
+              More Service
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                <path
+                  fillRule="evenodd"
+                  d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </Link>
+
           </div>
 
         </div>

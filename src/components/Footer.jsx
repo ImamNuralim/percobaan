@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 export const Footer = () => {
   return (
@@ -17,16 +18,27 @@ export const Footer = () => {
               <br />Kami membangun dan menghadirkan solusi teknologi yang mendorong pertumbuhan, efisiensi, dan keunggulan kompetitif.
             </p>
             {/* LinkedIn Icon */}
-            <a href="#" className="inline-block p-2 border border-gray-500 rounded-md">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                className="w-6 h-6"
-              >
-                <path d="M22.23 0H1.77C.8 0 0 .77 0 1.73v20.54C0 23.23.8 24 1.77 24h20.46c.97 0 1.77-.77 1.77-1.73V1.73C24 .77 23.2 0 22.23 0zM7.09 20.46H3.66V9.01h3.43v11.45zM5.38 7.55c-1.12 0-2.03-.92-2.03-2.05s.91-2.05 2.03-2.05c1.13 0 2.04.92 2.04 2.05s-.91 2.05-2.04 2.05zM20.46 20.46h-3.43v-5.61c0-1.34-.48-2.25-1.68-2.25-1.24 0-1.98.84-1.98 2.25v5.61h-3.43V9.01h3.43v1.54c.45-.69 1.25-1.68 3.09-1.68 3.32 0 3.9 2.18 3.9 6.27v5.32z" />
-              </svg>
+            <a href="#" className="inline-block p-1 border border-gray-500 ">
+              <i class="ri-linkedin-box-line text-4xl"></i>
             </a>
+            
+          </div>
+
+          {/* Middle Section - Social Links */}
+          <div className="flex-1 mb-8 md:mb-0">
+            <h4 className="text-lg font-semibold mb-4">Informasi Kontak</h4>
+            <ul className="space-y-2">
+            <li>
+                <a href="#" className="text-gray-400 hover:text-gray-300">Based in Mataram & Bima</a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-400 hover:text-gray-300">info@mojofolks.com</a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-400 hover:text-gray-300">+62 813-3796-1020</a>
+              </li>
+              
+            </ul>
           </div>
 
           {/* Right Section - Navigation Links */}
@@ -36,21 +48,10 @@ export const Footer = () => {
             <div className="absolute bottom-0 right-0 w-64 h-64 bg-blue-500 opacity-20 rounded-full blur-3xl transform translate-x-1/4 translate-y-1/4"></div>
 
             <nav className="flex flex-col space-y-4 text-left md:text-right z-10 relative ">
-              <a href="/" className="text-xl font-medium hover:text-gray-400">
-                Home
-              </a>
-              <a href="/about" className="text-xl font-medium hover:text-gray-400">
-                Tentang
-              </a>
-              <a href="/service" className="text-xl font-medium hover:text-gray-400">
-                Service
-              </a>
-              <a href="#" className="text-xl font-medium hover:text-gray-400">
-                Project
-              </a>
-              <a href="#" className="text-xl font-medium hover:text-gray-400">
-                Contact
-              </a>
+              <Link to="/" className="text-xl font-medium hover:text-gray-400" onClick={() => setMenuOpen(false)}>Home</Link>
+              <Link to="/about" className="text-xl font-medium hover:text-gray-400" onClick={() => setMenuOpen(false)}>Tentang</Link>
+              <Link to="/service" className="text-xl font-medium hover:text-gray-400" onClick={() => setMenuOpen(false)}>Service</Link>
+              <Link to="/proyek" className="text-xl font-medium hover:text-gray-400" onClick={() => setMenuOpen(false)}>Project</Link>
             </nav>
           </div>
         </div>
