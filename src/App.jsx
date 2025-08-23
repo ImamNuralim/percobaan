@@ -3,7 +3,7 @@ import DataImage from "./data";
 import { listClient } from './data';
 import { listBidangUsaha } from "./data"
 import { Link } from 'react-router-dom';
-import { Title, Meta, Link, Script } from "react-head";
+import { Title, Meta, Script } from "react-head";
 
 
 

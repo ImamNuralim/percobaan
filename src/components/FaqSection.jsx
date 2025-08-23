@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Title, Meta, Script } from "react-head";
+import { Script } from "react-head";
 
 const FaqSection = () => {
     // State untuk mengelola FAQ yang sedang dibuka

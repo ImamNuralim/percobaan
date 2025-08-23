@@ -4,7 +4,7 @@ import { } from "module";
 import CalltoAction from '../components/CalltoAction';
 import { Link } from 'react-router-dom';
 import { useState } from "react";
-import { Title, Meta, Script, Link } from "react-head";
+import { Title, Meta, Script } from "react-head";
 
 
 const About = () => {
