@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from "react-helmet-async";
 
 const FaqSection = () => {
     // State untuk mengelola FAQ yang sedang dibuka
@@ -29,7 +30,7 @@ const FaqSection = () => {
             question: "Bagaimana sistem pembayaran yang berlaku?",
             answer: "Umumnya pembayaran dilakukan bertahap, dimulai dengan DP sebagai tanda jadi, lalu pelunasan setelah proyek selesai. Namun, skema pembayaran dapat disesuaikan dengan kesepakatan bersama."
         },
-        
+
         {
             question: "Bagaimana dengan biaya layanan?",
             answer: "Biaya tergantung pada jenis layanan dan tingkat kompleksitas proyek. Kami akan memberikan estimasi harga yang transparan setelah memahami kebutuhan Anda secara detail."
@@ -38,7 +39,7 @@ const FaqSection = () => {
             question: "Setelah proyek selesai, apakah ada dukungan lanjutan?",
             answer: "Secara umum, kami memberikan garansi selama 2 minggu setelah proyek selesai. Untuk kebutuhan maintenance jangka panjang, kami menyediakan paket tambahan yang dapat disesuaikan dengan kompleksitas proyek."
         },
-        
+
     ];
 
     const toggleFaq = (index) => {
@@ -46,43 +47,63 @@ const FaqSection = () => {
     };
 
     return (
-        <div className=" py-16 bg-[#0c0228] backdrop-blur-md w-screen -ml-[50vw] -mr-[50vw] relative left-1/2 right-1/2 overflow-hidden" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" data-aos-once="true">
-        
-            <div className="container mx-auto px-6 sm:px-12 md:px-24 justify-items-center">
-                <div className="text-center mb-12">
-                    <p className="text-sm uppercase tracking-widest text-gray-300 mb-2">
-                        FAQ
-                    </p>
-                    <h2 className="text-2xl md:text-4xl font-bold text-white">
-                        Pertanyaan yang Sering Diajukan
-                    </h2>
-                </div>
+        <>
+            <Helmet>
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "FAQPage",
+                        "mainEntity": faqs.map((faq) => ({
+                            "@type": "Question",
+                            "name": faq.question,
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": faq.answer,
+                            },
+                        })),
+                    })}
+                </script>
+            </Helmet>
+            <div className=" py-16 bg-[#0c0228] backdrop-blur-md w-screen -ml-[50vw] -mr-[50vw] relative left-1/2 right-1/2 overflow-hidden" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" data-aos-once="true">
 
-                {/* FAQ Content Box */}
-                <div className="bg-white p-6 md:p-12 shadow-lg w-250  [@media(max-width:1026px)]:w-[100%]">
-                    {faqs.map((faq, index) => (
-                        <div key={index} className="py-6 border-b border-gray-200 last:border-b-0">
-                            <button
-                                className="flex justify-between items-center w-full focus:outline-none"
-                                onClick={() => toggleFaq(index)}
-                            >
-                                <p className="text-lg font-semibold text-gray-800 text-left">
-                                    {faq.question}
-                                </p>
-                                <span className="ml-4 text-2xl font-bold text-gray-600">
-                                    {openIndex === index ? "—" : "+"}
-                                </span>
-                            </button>
-                            {openIndex === index && (
-                                <div className="mt-4 text-gray-600 leading-relaxed pr-8">
-                                    {faq.answer}
-                                </div>
-                            )}
-                        </div>
-                    ))}
+                <div className="container mx-auto px-6 sm:px-12 md:px-24 justify-items-center">
+                    <div className="text-center mb-12">
+                        <p className="text-sm uppercase tracking-widest text-gray-300 mb-2">
+                            FAQ
+                        </p>
+                        <h2 className="text-2xl md:text-4xl font-bold text-white">
+                            Pertanyaan yang Sering Diajukan
+                        </h2>
+                    </div>
+
+                    {/* FAQ Content Box */}
+                    <div className="bg-white p-6 md:p-12 shadow-lg w-250  [@media(max-width:1026px)]:w-[100%]">
+                        {faqs.map((faq, index) => (
+                            <div key={index} className="py-6 border-b border-gray-200 last:border-b-0">
+                                <button
+                                    className="flex justify-between items-center w-full focus:outline-none"
+                                    onClick={() => toggleFaq(index)}
+                                >
+                                    <p className="text-lg font-semibold text-gray-800 text-left">
+                                        {faq.question}
+                                    </p>
+                                    <span className="ml-4 text-2xl font-bold text-gray-600">
+                                        {openIndex === index ? "—" : "+"}
+                                    </span>
+                                </button>
+                                {openIndex === index && (
+                                    <div className="mt-4 text-gray-600 leading-relaxed pr-8">
+                                        {faq.answer}
+                                    </div>
+                                )}
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
-        </div>
+        </>
+
+
     );
 };
 

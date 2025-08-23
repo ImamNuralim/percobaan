@@ -3,6 +3,7 @@ import DataImage from "./data";
 import { listClient } from './data';
 import { listBidangUsaha } from "./data"
 import { Link } from 'react-router-dom';
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -10,7 +11,49 @@ function App() {
 
   return (
     <>
+      <Helmet>
+        {/* SEO */}
+        <title>Mojo Folks - IT Agency</title>
+        <meta name="description" content="Layanan kreatif Mojo Folks untuk membantu bisnis Anda tumbuh dengan solusi digital." />
+        <meta name="keywords" content="Website Developer Mataram, IT Consultant Mataram, Website Developer Lombok, IT Agency NTB, Jasa Pembuatan Website Mataram, Mojo Folks" />
 
+        {/* Open Graph (FB, WhatsApp, LinkedIn) */}
+        <meta property="og:title" content="Mojo Folks - IT Agency" />
+        <meta property="og:description" content="Layanan kreatif Mojo Folks untuk membantu bisnis Anda tumbuh." />
+        <meta property="og:image" content="https://mojofolks.com/assets/img/programmer.webp.webp" />
+        <meta property="og:url" content="https://mojofolks.com/project" />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Mojo Folks - Profesional IT Agency" />
+        <meta name="twitter:description" content="Solusi digital kreatif untuk bisnis Anda. Website developer dan IT consultant di Lombok & Bima." />
+        <meta name="twitter:image" content="https://mojofolks.com/assets/img/programmer.webp.webp" />
+
+        {/* Structured Data (JSON-LD) */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Mojo Folks",
+            "url": "https://mojofolks.com",
+            "logo": "https://mojofolks.com/assets/img/software-development-team.webp",
+            "sameAs": [
+              "https://facebook.com/mojofolks",
+              "https://instagram.com/mojofolks",
+              "https://linkedin.com/company/mojofolks"
+            ],
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+62-812-xxxx-xxxx",
+              "contactType": "Customer Service",
+              "areaServed": "ID",
+              "availableLanguage": ["Indonesian", "English"]
+            }
+          })}
+        </script>
+
+      </Helmet>
       <div className="bg-[#070920] text-white py-20 sm:mb-10 md:py-35 w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] md:pt-36 md:mb-20">
         <div className="container mx-auto px-6 sm:px-5 md:px-1 lg:px-20 flex flex-col md:flex-row items-center justify-between">
           <div className="absolute inset-0">
@@ -22,7 +65,7 @@ function App() {
               Service
             </p>
             <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6 animate__animated animate__fadeInUp animate__delay-1s">
-              Kami membawa bisnis Anda ke tingkat yang lebih tinggi
+              Membawa bisnis Anda ke tingkat yang lebih tinggi
             </h1>
             {/* SVG versi mobile/tab */}
             <div className="flex justify-center items-center mb-6 md:hidden">
@@ -30,7 +73,7 @@ function App() {
               <img src="/assets/img/globe.webp" alt="Hero Image" className="block md:hidden w-[1200px] md:ml-auto animate__animated animate__fadeInUp animate__delay-3s  md:scale-170 pt-5 mb-5 lg:translate-x-30 filter drop-shadow-[0_35px_60px_#4426F0]" />
             </div>
             <p className="text-base md:text-lg mb-8 opacity-80 animate__animated animate__fadeInUp animate__delay-1s sm:animate__animated animate__fadeInUp animate__delay-4s">
-              Kami mendukung penuh dari perencanaan hingga eksekusi, dengan layanan cepat, tepat, dan sesuai kebutuhan untuk membantu bisnis Anda tumbuh dan bersaing.
+              Mendukung penuh dari perencanaan hingga eksekusi, dengan layanan cepat, tepat, dan sesuai kebutuhan untuk membantu bisnis Anda tumbuh dan bersaing.
             </p>
           </div>
           {/* Right Section - Image/SVG versi desktop */}
@@ -49,14 +92,14 @@ function App() {
             src="/assets/img/Mojo Tentang.webp"
             alt="Abstract technology illustration"
             className="w-full h-full object-cover opacity-80" data-aos="fade-right"
-  data-aos-delay="6000"
-  data-aos-once="true"
+            data-aos-delay="6000"
+            data-aos-once="true"
           />
         </div>
 
         <div className="bg-white p-8 md:p-16 flex flex-col justify-center" data-aos="fade-left"
-  data-aos-delay="6000"
-  data-aos-once="true">
+          data-aos-delay="6000"
+          data-aos-once="true">
           <h2 className="text-3xl md:text-5xl font-bold text-gray-800 leading-tight mb-4">
             Mojo Folks – Future Tech Insights 2025
           </h2>
@@ -64,48 +107,48 @@ function App() {
             Kami percaya masa depan dibentuk oleh inovasi hari ini. Di <span className="font-bold">Mojo Folks</span> , kami mengulas dan membedah teknologi-teknologi terbaru yang siap mengubah cara kita hidup, bekerja, dan berkreasi. Dari tren digital terkini hingga terobosan masa depan, temukan wawasan yang akan membantu bisnis dan ide Anda berkembang di era yang serba cepat ini.
           </p>
 
-<Link to="/about" className="flex items-center text-black font-semibold hover:underline">
-  Tentang
-  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
-    <path 
-      fillRule="evenodd" 
-      d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" 
-      clipRule="evenodd" 
-    />
-  </svg>
-</Link>
+          <Link to="/about" className="flex items-center text-black font-semibold hover:underline">
+            Tentang
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+              <path
+                fillRule="evenodd"
+                d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                clipRule="evenodd"
+              />
+            </svg>
+          </Link>
 
         </div>
 
         {/* Tentang - Service */}
 
-        <div className="bg-zinc-900 p-8 md:p-16 flex flex-col justify-center"  data-aos="fade-right"
-  data-aos-delay="6000"
-  data-aos-once="true">
+        <div className="bg-zinc-900 p-8 md:p-16 flex flex-col justify-center" data-aos="fade-right"
+          data-aos-delay="6000"
+          data-aos-once="true">
           <h2 className="text-2xl md:text-5xl font-bold text-white leading-tight mb-4">
-            Kami Hadir untuk Mendorong Pertumbuhan Bisnis Lewat Solusi Digital Inovatif.
+            Hadir untuk Mendorong Pertumbuhan Bisnis Lewat Solusi Digital Inovatif.
           </h2>
           <p className="text-gray-300 text-lg mb-6 max-w-prose">
             Membantu bisnis Anda berkembang melalui solusi digital inovatif, mulai dari pembuatan website, aplikasi, hingga strategi pemasaran online yang efektif.
           </p>
           <Link to="/service" className="flex items-center text-white font-semibold hover:underline">
-  More Service
-  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
-    <path 
-      fillRule="evenodd" 
-      d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" 
-      clipRule="evenodd" 
-    />
-  </svg>
-</Link>
+            More Service
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+              <path
+                fillRule="evenodd"
+                d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                clipRule="evenodd"
+              />
+            </svg>
+          </Link>
         </div>
         <div className="bg-blue-500 h-[400px] md:h-auto overflow-hidden relative">
           <img
             src="/assets/img/section-tentang.webp"
             alt="Two people wearing safety glasses working"
-            className="w-full h-full object-cover"  data-aos="fade-left"
-  data-aos-delay="6000"
-  data-aos-once="true"
+            className="w-full h-full object-cover" data-aos="fade-left"
+            data-aos-delay="6000"
+            data-aos-once="true"
           />
         </div>
       </div>
@@ -118,9 +161,9 @@ function App() {
           <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-r from-blue-500 to-cyan-500 blur-[150px] opacity-30"></div>
         </div>
         <div className="max-w-7xl mx-auto px-4 md:p-4">
-          <div class="flex flex-col lg:flex-row gap-8 mb-8 lg:mb-16"  data-aos="fade-up"
-  data-aos-delay="6000"
-  data-aos-once="true">
+          <div class="flex flex-col lg:flex-row gap-8 mb-8 lg:mb-16" data-aos="fade-up"
+            data-aos-delay="6000"
+            data-aos-once="true">
             <div class="w-full md:w-2/3">
               <h2 class="text-3xl md:text-5xl font-bold text-white leading-tight">
                 Kami Melayani Berbagai Sektor Ekonomi
@@ -157,14 +200,14 @@ function App() {
           <img
             src="/assets/img/grow-business.webp"
             alt="Abstract technology illustration"
-            className="w-full h-full object-cover opacity-80"  data-aos="fade-right"
-  data-aos-delay="6000"
-  data-aos-once="true"/>
+            className="w-full h-full object-cover opacity-80" data-aos="fade-right"
+            data-aos-delay="6000"
+            data-aos-once="true" />
         </div>
 
-        <div className="bg-white p-8 md:p-16 flex flex-col justify-center"  data-aos="fade-left"
-  data-aos-delay="6000"
-  data-aos-once="true">
+        <div className="bg-white p-8 md:p-16 flex flex-col justify-center" data-aos="fade-left"
+          data-aos-delay="6000"
+          data-aos-once="true">
           <h2 className="text-3xl md:text-5xl font-bold text-gray-800 leading-tight mb-4">
             Solusi Progresif untuk Bisnis yang Terus Berkembang.
           </h2>

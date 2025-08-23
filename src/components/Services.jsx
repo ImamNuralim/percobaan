@@ -1,8 +1,31 @@
 import React from 'react'
+import { Helmet } from "react-helmet-async";
 
 export const Services = () => {
     return (
         <>
+            <Helmet>
+                <title>Layanan Kami - Mojo Folks</title>
+                <meta
+                    name="description"
+                    content="Mojo Folks menyediakan layanan Web Development, Branding, SEO, dan IT Consulting di Mataram & Lombok."
+                />
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "Service",
+                        "serviceType": "Digital Solutions",
+                        "provider": {
+                            "@type": "Organization",
+                            "name": "Mojo Folks",
+                            "url": "https://mojofolks.com",
+                            "logo": "https://mojofolks.com/assets/img/software-development-team.webp"
+                        },
+                        "areaServed": "Mataram, Lombok, Bima",
+                        "description": "Mojo Folks menyediakan Web Development, Branding, SEO, dan IT Consulting."
+                    })}
+                </script>
+            </Helmet>
             <div className="bg-white py-20 w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
                 <div className="container mx-auto px-5 sm:px-6 lg:px-15 xl:px-25">
                     {/* Header Section */}

@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 const Assist = () => {
     const [openIndex, setOpenIndex] = useState(null);
@@ -35,8 +36,27 @@ const Assist = () => {
         }
     ];
 
+    const howToSchema = {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "Langkah Kami dalam Membantu Bisnis Anda",
+        "description": "Pendekatan terstruktur mulai dari Discover hingga Results untuk membantu bisnis berkembang.",
+        "step": steps.map((step, i) => ({
+            "@type": "HowToStep",
+            "position": i + 1,
+            "name": step.title,
+            "text": step.desc
+        }))
+    };
+
     return (
         <>
+
+            <Helmet>
+                <script type="application/ld+json">
+                    {JSON.stringify(howToSchema)}
+                </script>
+            </Helmet>
             <div className="bg-gray-900 text-white py-20 px-5 w-screen -ml-[50vw] -mr-[50vw] relative left-1/2 right-1/2 overflow-hidden ">
                 <div className="container mx-auto max-w-7xl px-4">
                     {/* Judu    l Bagian */}

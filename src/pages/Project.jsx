@@ -3,9 +3,10 @@ import { listProyek } from '../data';
 import { IoArrowForward, IoArrowBack } from "react-icons/io5";
 import CalltoAction from "../components/CalltoAction";
 import "aos/dist/aos.css";
+import { Helmet } from "react-helmet-async";
 
 const Project = () => {
-   
+
     const [selectedProject, setSelectedProject] = useState(null);
     const [visibleProjectsCount, setVisibleProjectsCount] = useState(5);
 
@@ -44,6 +45,41 @@ const Project = () => {
             {/* Tampilan halaman utama (hero, daftar proyek, dan CTA) akan disembunyikan jika ada proyek yang dipilih */}
             {!selectedProject && (
                 <>
+                    <Helmet>
+                        {/* SEO */}
+                        <title>Project - Mojo Folks</title>
+                        <meta name="description" content="Lihat portfolio project Mojo Folks sebagai Profesional IT Agency" />
+                        <meta name="keywords" content="Project Website Mataram, Portofolio Mojo Folks, Project IT Consultant Lombok, Jasa Website NTB, Website Developer Bima" />
+
+                        {/* Open Graph (FB, WhatsApp, LinkedIn) */}
+                        <meta property="og:title" content="Project - Mojo Folks" />
+                        <meta property="og:description" content="Portofolio project Mojo Folks sebagai website developer dan IT consultant di NTB." />
+                        <meta property="og:image" content="https://mojofolks.com/assets/img/programmer.webp.webp" />
+                        <meta property="og:url" content="https://mojofolks.com/project" />
+                        <meta property="og:type" content="website" />
+
+                        {/* Twitter Card */}
+                        <meta name="twitter:card" content="summary_large_image" />
+                        <meta name="twitter:title" content="Project - Mojo Folks" />
+                        <meta name="twitter:description" content="Lihat hasil karya Mojo Folks: Pembuatan Website dan Aplikasi, IT Consulting, dan Solusi Digital di NTB." />
+                        <meta name="twitter:image" content="https://mojofolks.com/assets/img/programmer.webp.webp" />
+
+                        {/* Structured Data (JSON-LD) */}
+                        <script type="application/ld+json">
+                            {JSON.stringify({
+                                "@context": "https://schema.org",
+                                "@type": "CreativeWork",
+                                "name": "Portofolio Project Mojo Folks",
+                                "url": "https://mojofolks.com/project",
+                                "creator": {
+                                    "@type": "Organization",
+                                    "name": "Mojo Folks"
+                                },
+                                "description": "Lihat berbagai project website dan solusi digital yang telah dikembangkan oleh Mojo Folks di NTB."
+                            })}
+                        </script>
+
+                    </Helmet>
                     <div className="bg-[#0d082d] text-white py-20 sm:pt- sm:mb-2 md:py-35 w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] md:pt-36 md:mb-20">
                         <div className="container mx-auto px-6 sm:px-5 md:px-1 lg:px-20 flex flex-col md:flex-row items-center justify-between">
                             <div className="absolute inset-0">
@@ -51,7 +87,7 @@ const Project = () => {
                             </div>
                             {/* Left Section - Text Content */}
                             <div className="md:w-1/2 mb-10 md:mb-0 md:pr-12 " data-aos="fade-up"
-  data-aos-duration="1000">
+                                data-aos-duration="1000">
                                 <p className="text-sm uppercase tracking-widest text-light-blue mb-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600" data-aos-once="true">
                                     Our Project
                                 </p>

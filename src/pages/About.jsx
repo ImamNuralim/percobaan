@@ -4,16 +4,51 @@ import { } from "module";
 import CalltoAction from '../components/CalltoAction';
 import { Link } from 'react-router-dom';
 import { useState } from "react";
-
+import { Helmet } from "react-helmet-async";
 
 
 const About = () => {
   const [activeIndex, setActiveIndex] = useState(null);
-  
+
   return (
     <>
 
+      <Helmet>
+        {/* SEO */}
+        <title>Tentang Kami - Mojo Folks</title>
+        <meta name="description" content="Mojo Folks adalah IT agency dan website developer profesional yang berbasis di Bima dan Mataram. Kami membantu bisnis tumbuh dengan solusi kreatif digital." />
+        <meta name="keywords" content="Tentang Mojo Folks, Digital Agency Mataram, IT Consultant Lombok, Website Developer Bima, IT Agency NTB" />
 
+        {/* Open Graph (FB, WhatsApp, LinkedIn) */}
+        <meta property="og:title" content="Tentang Kami - Mojo Folks Digital Agency" />
+        <meta property="og:description" content="Mojo Folks adalah tim kreatif digital agency di NTB, siap membantu bisnis Anda berkembang." />
+        <meta property="og:image" content="https://mojofolks.com/assets/img/programmer.webp.webp" />
+        <meta property="og:url" content="https://mojofolks.com/project" />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Tentang Kami - Mojo Folks IT Agency" />
+        <meta name="twitter:description" content="Kenali tim Mojo Folks, IT consultant dan website developer di NTB." />
+        <meta name="twitter:image" content="https://mojofolks.com/assets/img/programmer.webp.webp" />
+
+        {/* Structured Data (JSON-LD) */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "AboutPage",
+            "name": "Tentang Mojo Folks",
+            "description": "Mojo Folks adalah tim kreatif digital agency di Mataram, Lombok, dan Bima.",
+            "url": "https://mojofolks.com/about",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Mojo Folks",
+              "url": "https://mojofolks.com"
+            }
+          })}
+        </script>
+
+      </Helmet>
       <div className="bg-[#070920] text-white py-20 sm:mb-10 md:py-89 w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] md:pt-36 md:mb-20">
         <div className="container mx-auto px-6 sm:px-5 md:px-1 lg:px-20 flex flex-col md:flex-row items-center justify-between">
           <div className="absolute inset-0">
@@ -23,7 +58,7 @@ const About = () => {
               ABOUT US
             </p>
             <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
-              Empowering Your Future with Digital Innovation
+              Mewujudkan Masa Depan Bisnis Anda dengan Sentuhan Inovasi Digital
             </h1>
             <div className="flex justify-center items-center mb-6 md:hidden">
               <img src="/assets/img/hero-section 3.webp" alt="Hero Image" className="block md:hidden w-[1200px] md:ml-auto animate__animated animate__fadeInUp animate__delay-3s  md:scale-170 pt-5 mb-5 lg:translate-x-30 filter drop-shadow-[0_35px_60px_#4426F0]" />
@@ -60,81 +95,80 @@ const About = () => {
       {/* Our Team */}
 
       <div className="bg-zinc-900 -mt-50 relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen px-4 sm:px-12 lg:px-24 py-15">
-      <div className="container mx-auto px-6 sm:px-5 md:px-15">
-        <div className="container mx-auto px-4">
-          {/* Header Section */}
-          <div
-            className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-12"
-            data-aos="fade-up"
-            data-aos-duration="800"
-            data-aos-delay="400"
-            data-aos-once="true"
-          >
-            <div className="sm:w-2/3 mb-6 sm:mb-0">
-              <div className="flex items-baseline space-x-2 mb-2">
-                <h2 className="text-3xl font-bold text-white">
-                  Tim di Balik Perjalanan Kami
-                </h2>
+        <div className="container mx-auto px-6 sm:px-5 md:px-15">
+          <div className="container mx-auto px-4">
+            {/* Header Section */}
+            <div
+              className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-12"
+              data-aos="fade-up"
+              data-aos-duration="800"
+              data-aos-delay="400"
+              data-aos-once="true"
+            >
+              <div className="sm:w-2/3 mb-6 sm:mb-0">
+                <div className="flex items-baseline space-x-2 mb-2">
+                  <h2 className="text-3xl font-bold text-white">
+                    Tim di Balik Perjalanan Kami
+                  </h2>
+                </div>
+                <p className="text-base text-gray-300 max-w-2xl">
+                  Kami adalah tim kreatif dan berdedikasi yang bekerja sama untuk
+                  mengubah ide menjadi solusi nyata. Dengan keahlian dan semangat
+                  kolaborasi, kami memastikan setiap proyek mencapai hasil terbaik.
+                </p>
               </div>
-              <p className="text-base text-gray-300 max-w-2xl">
-                Kami adalah tim kreatif dan berdedikasi yang bekerja sama untuk
-                mengubah ide menjadi solusi nyata. Dengan keahlian dan semangat
-                kolaborasi, kami memastikan setiap proyek mencapai hasil terbaik.
-              </p>
             </div>
-          </div>
 
-          {/* Grid jadi slider di mobile */}
-          <div className="flex gap-6 overflow-x-auto snap-x snap-mandatory sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:overflow-visible">
-            {[
-              {
-                src: "/assets/img/imam.webp",
-                name: "Imam Nuralim",
-                role: "Fullstack Developer",
-                dad: "700",
-              },
-              {
-                src: "/assets/img/anhar.webp",
-                name: "Anhar Aldervaro",
-                role: "Backend Developer",
-                dad: "900",
-              },
-              {
-                src: "/assets/img/mark.webp",
-                name: "Marvel Shivan Mark Gesang",
-                role: "Account Executive",
-                dad: "1100",
-              },
-            ].map((person, index) => (
-              <div
-                key={index}
-                className="flex-shrink-0 w-full snap-start flex flex-col sm:w-auto cursor-pointer"
-                data-aos="fade-up"
-                data-aos-delay={person.dad}
-                data-aos-duration="1000"
-                data-aos-once="true"
-                onClick={() =>
-                  setActiveIndex(activeIndex === index ? null : index)
-                }
-              >
-                <img
-                  src={person.src}
-                  alt={person.name}
-                  className={`w-full aspect-square object-cover mb-4 transition-all duration-500 
-                    ${
-                      activeIndex === index
+            {/* Grid jadi slider di mobile */}
+            <div className="flex gap-6 overflow-x-auto snap-x snap-mandatory sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:overflow-visible">
+              {[
+                {
+                  src: "/assets/img/imam.webp",
+                  name: "Imam Nuralim",
+                  role: "Fullstack Developer",
+                  dad: "700",
+                },
+                {
+                  src: "/assets/img/anhar.webp",
+                  name: "Anhar Aldervaro",
+                  role: "Backend Developer",
+                  dad: "900",
+                },
+                {
+                  src: "/assets/img/mark.webp",
+                  name: "Marvel Shivan Mark Gesang",
+                  role: "Account Executive",
+                  dad: "1100",
+                },
+              ].map((person, index) => (
+                <div
+                  key={index}
+                  className="flex-shrink-0 w-full snap-start flex flex-col sm:w-auto cursor-pointer"
+                  data-aos="fade-up"
+                  data-aos-delay={person.dad}
+                  data-aos-duration="1000"
+                  data-aos-once="true"
+                  onClick={() =>
+                    setActiveIndex(activeIndex === index ? null : index)
+                  }
+                >
+                  <img
+                    src={person.src}
+                    alt={person.name}
+                    className={`w-full aspect-square object-cover mb-4 transition-all duration-500 
+                    ${activeIndex === index
                         ? "grayscale-0"
                         : "grayscale hover:grayscale-0"
-                    }`}
-                />
-                <h3 className="text-xl font-bold text-white">{person.name}</h3>
-                <p className="text-gray-300">{person.role}</p>
-              </div>
-            ))}
+                      }`}
+                  />
+                  <h3 className="text-xl font-bold text-white">{person.name}</h3>
+                  <p className="text-gray-300">{person.role}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
       {/* Core Values */}
 
@@ -175,7 +209,7 @@ const About = () => {
               <span className="font-medium text-gray-700">Integritas</span>
             </div>
           </div>
-          
+
           <div className="mt-8 text-left">
             <Link to="/service" className="inline-block px-2 py-2 border bg-blue-600 text-white hover:bg-blue-500 transition-colors">
               More Service

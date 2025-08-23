@@ -5,14 +5,58 @@ import { Services } from "../components/Services";
 import { useState } from "react";
 import Assist from '../components/Assist';
 import CalltoAction from '../components/CalltoAction';
+import { Helmet } from "react-helmet-async";
+
+
 
 export const Service = () => {
   const [open, setOpen] = useState(false);
   return (
     <>
+
+      <Helmet>
+        {/* SEO */}
+        <title>Service - Mojo Folks</title>
+        <meta name="description" content="IT consultant & Web App developer di NTB. Mojo Folks menyediakan layanan digital untuk membantu bisnis Anda berkembang." />
+        <meta name="keywords" content="Website Developer Mataram, Website Developer Bima, Website Developer Lombok, IT Consultant Mataram, IT Agency Lombok, Jasa Pembuatan Website NTB" />
+
+        {/* Open Graph (FB, WhatsApp, LinkedIn) */}
+        <meta property="og:title" content="Layanan Web App Developer & IT Consultant - Mojo Folks" />
+        <meta property="og:description" content="Mojo Folks menawarkan layanan kreatif digital, IT consultant, dan pembuatan website profesional di NTB." />
+        <meta property="og:image" content="https://mojofolks.com/assets/img/grow-business.webp" />
+        <meta property="og:url" content="https://mojofolks.com/service" />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Layanan Web App Developer & IT Consultant - Mojo Folks" />
+        <meta name="twitter:description" content="Solusi digital untuk bisnis Anda. IT consultant & website developer profesional di Lombok dan Bima." />
+        <meta name="twitter:image" content="https://mojofolks.com/assets/img/grow-business.webp" />
+
+        {/* Structured Data (JSON-LD) */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "serviceType": "Website Development & IT Consulting",
+            "provider": {
+              "@type": "Organization",
+              "name": "Mojo Folks",
+              "url": "https://mojofolks.com",
+              "logo": "https://mojofolks.com/assets/img/software-development-team.webp"
+            },
+            "areaServed": {
+              "@type": "Place",
+              "name": "Mataram, Bima, Lombok, Nusa Tenggara Barat"
+            },
+            "description": "Mojo Folks menyediakan layanan pembuatan website dan IT consulting untuk membantu bisnis tumbuh dengan solusi digital."
+          })}
+        </script>
+
+      </Helmet>
       <div className="bg-[#070920] text-white py-20 sm:mb-10 md:py-35 w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] md:pt-36 md:mb-20">
         <div className="container mx-auto px-6 sm:px-5 md:px-1 lg:px-20 flex flex-col md:flex-row items-center justify-between">
-          
+
           {/* Left Section - Text Content */}
           <div className="md:w-1/2 mb-10 md:mb-0 md:pr-12">
             <p className="text-sm uppercase tracking-widest text-light-blue mb-4" data-aos="fade-up" data-aos-duration="600" data-aos-delay="600" data-aos-once="true">
@@ -108,12 +152,12 @@ export const Service = () => {
           <p className="text-gray-600 text-lg mb-6 max-w-prose">
             Setiap proyek kami jalankan dengan perpaduan antara ketepatan waktu dan standar profesional yang tinggi. Walau dikerjakan cepat, kami tetap memastikan akurasi, kualitas, dan hasil yang dapat diandalkan.
           </p>
-          
-            <div className="mt-8 text-left">
+
+          <div className="mt-8 text-left">
             <a
               href="https://wa.me/6281337961020?text=Halloo%20Mojo%20Folks:)"
               className="inline-block px-2 py-2 border bg-blue-600 text-white hover:bg-blue-500 transition-colors">
-              Explore Services
+              Gabung dengan kami!
             </a>
           </div>
         </div>
