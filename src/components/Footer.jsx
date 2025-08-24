@@ -51,7 +51,7 @@ export const Footer = () => {
               <Link to="/" className="text-xl font-medium hover:text-gray-400" onClick={() => setMenuOpen(false)}>Home</Link>
               <Link to="/about" className="text-xl font-medium hover:text-gray-400" onClick={() => setMenuOpen(false)}>Tentang</Link>
               <Link to="/service" className="text-xl font-medium hover:text-gray-400" onClick={() => setMenuOpen(false)}>Service</Link>
-              <Link to="/proyek" className="text-xl font-medium hover:text-gray-400" onClick={() => setMenuOpen(false)}>Project</Link>
+              <Link to="/project" className="text-xl font-medium hover:text-gray-400" onClick={() => setMenuOpen(false)}>Project</Link>
             </nav>
           </div>
         </div>
