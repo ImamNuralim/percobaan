@@ -56,7 +56,7 @@ const Navbar = () => {
           <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
           <Link to="/about" onClick={() => setMenuOpen(false)}>Tentang</Link>
           <Link to="/service" onClick={() => setMenuOpen(false)}>Service</Link>
-          <Link to="/proyek" onClick={() => setMenuOpen(false)}>Project</Link>
+          <Link to="/project" onClick={() => setMenuOpen(false)}>Project</Link>
           <Link to="/kontak" onClick={() => setMenuOpen(false)}>Kontak</Link>
         </div>
       </div>
