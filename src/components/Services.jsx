@@ -8,7 +8,7 @@ export const Services = () => {
             <Title>Layanan Kami - Mojo Folks</Title>
             <Meta
                 name="description"
-                content="Mojo Folks menyediakan layanan Web Development, Branding, SEO, dan IT Consulting di Mataram & Lombok."
+                content="Mojo Folks menyediakan layanan Web Development, Branding, SEO, dan IT Consulting di Mataram & Bima."
             />
             {/* Structured Data (JSON-LD) */}
             <script

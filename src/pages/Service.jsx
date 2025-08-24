@@ -5,6 +5,7 @@ import { Services } from "../components/Services";
 import { useState } from "react";
 import CalltoAction from '../components/CalltoAction';
 import { Title, Meta } from "react-head";
+import { Test } from "../components/Test";
 
 
 
@@ -33,28 +34,24 @@ export const Service = () => {
       <Meta name="twitter:image" content="https://mojofolks.com/assets/img/grow-business.webp" />
 
       {/* Structured Data (JSON-LD) */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "serviceType": "Website Development & IT Consulting",
-            "provider": {
-              "@type": "Organization",
-              "name": "Mojo Folks",
-              "url": "https://mojofolks.com",
-              "logo": "https://mojofolks.com/assets/img/software-development-team.webp"
-            },
-            "areaServed": {
-              "@type": "Place",
-              "name": "Mataram, Bima, Lombok, Nusa Tenggara Barat"
-            },
-            "description": "Mojo Folks menyediakan layanan pembuatan website dan IT consulting untuk membantu bisnis tumbuh dengan solusi digital."
-          })
-        }}
-      />
-
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "serviceType": "Website Development & IT Consulting",
+          "provider": {
+            "@type": "Organization",
+            "name": "Mojo Folks",
+            "url": "https://mojofolks.com",
+            "logo": "https://mojofolks.com/assets/img/software-development-team.webp"
+          },
+          "areaServed": {
+            "@type": "Place",
+            "name": "Mataram, Bima, Lombok, Nusa Tenggara Barat"
+          },
+          "description": "Mojo Folks menyediakan layanan pembuatan website dan IT consulting untuk membantu bisnis tumbuh dengan solusi digital."
+        })}
+      </script>
       <div className="bg-[#070920] text-white py-20 sm:mb-10 md:py-35 w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] md:pt-36 md:mb-20">
         <div className="container mx-auto px-6 sm:px-5 md:px-1 lg:px-20 flex flex-col md:flex-row items-center justify-between">
 
@@ -135,7 +132,7 @@ export const Service = () => {
       </div>
 
       <Services />
-      <Assist />
+      <Test />
       <FaqSection />
       <div className="xl:mt-0 md:mt-25 grid grid-cols-1 md:grid-cols-2 gap-0 w-screen -ml-[50vw] -mr-[50vw] relative left-1/2 right-1/2 overflow-hidden">
         <div className="bg-blue-900 h-[400px] md:h-auto overflow-hidden relative" data-aos="fade-right" data-aos-duration="800" data-aos-delay="400" data-aos-once="true">

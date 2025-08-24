@@ -152,7 +152,7 @@ const Project = () => {
                                     onClick={handleLoadMore}
                                     className=" text-gray-900 font-semibold py-3 px-8  transition-all duration-300 transform hover:scale-105" data-aos="fade-up" data-aos-duration="800" data-aos-delay="800" data-aos-once="true"
                                 >
-                                    Load More Projects <i class="ri-restart-line"></i>
+                                    Load More Projects <i className="ri-restart-line"></i>
                                 </button>
                             </div>
                         )}

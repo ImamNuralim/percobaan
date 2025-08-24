@@ -192,23 +192,23 @@ const About = () => {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-5">
             <div className="flex items-center space-x-3">
-              <i class="ri-checkbox-blank-circle-fill text-[7px]"></i>
+              <i className="ri-checkbox-blank-circle-fill text-[7px]"></i>
               <span className="font-medium text-gray-700">Pelayanan</span>
             </div>
             <div className="flex items-center space-x-3">
-              <i class="ri-checkbox-blank-circle-fill text-[7px]"></i>
+              <i className="ri-checkbox-blank-circle-fill text-[7px]"></i>
               <span className="font-medium text-gray-700">Kreativitas</span>
             </div>
             <div className="flex items-center space-x-3">
-              <i class="ri-checkbox-blank-circle-fill text-[7px]"></i>
+              <i className="ri-checkbox-blank-circle-fill text-[7px]"></i>
               <span className="font-medium text-gray-700">Kolaborasi</span>
             </div>
             <div className="flex items-center space-x-3">
-              <i class="ri-checkbox-blank-circle-fill text-[7px]"></i>
+              <i className="ri-checkbox-blank-circle-fill text-[7px]"></i>
               <span className="font-medium text-gray-700">Inovasi</span>
             </div>
             <div className="flex items-center space-x-3">
-              <i class="ri-checkbox-blank-circle-fill text-[7px]"></i>
+              <i className="ri-checkbox-blank-circle-fill text-[7px]"></i>
               <span className="font-medium text-gray-700">Integritas</span>
             </div>
           </div>
@@ -262,7 +262,7 @@ const About = () => {
       </div> */}
 
       {/*Proyek*/}
-
+      
       <CalltoAction />
 
       {/*client*/}

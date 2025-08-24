@@ -1,7 +1,9 @@
+import React from 'react'
+import { useState } from 'react';
 
-import React, { useState } from 'react'; 
 
-export const Assist = () => {
+export const Test = () => {
+
     const [openIndex, setOpenIndex] = useState(null);
 
     const toggleBox = (index) => {
@@ -34,9 +36,8 @@ export const Assist = () => {
             desc: "Kami memastikan hasil sesuai ekspektasi dengan evaluasi serta perbaikan berkelanjutan."
         }
     ];
-
-  return (
-    <>
+    return (
+        <>
 
 
             {/* Structured Data (JSON-LD) */}
@@ -63,12 +64,12 @@ export const Assist = () => {
                     {/* Judu    l Bagian */}
                     <div className="mb-12">
                         <h2
-                            className="text-4xl md:text-5xl font-bold w-200
+                            className="text-4xl md:text-5xl font-bold sm:w-100 md:w-200
               [@media(min-width:400px)_and_(max-width:539px)]:text-[28px]"
                         > Langkah Kami dalam Membantu Bisnis Anda
 
                         </h2>
-                        <p className="pt-5 w-200">Kami mendampingi setiap langkah bisnis Anda dengan pendekatan yang terstruktur, mulai dari perencanaan hingga implementasi, agar solusi yang dihadirkan benar-benar sesuai kebutuhan.</p>
+                        <p className="pt-5 sm:w-100 md:w-200">Kami mendampingi setiap langkah bisnis Anda dengan pendekatan yang terstruktur, mulai dari perencanaan hingga implementasi, agar solusi yang dihadirkan benar-benar sesuai kebutuhan.</p>
                     </div>
 
                     {/* Grid Proses */}
@@ -128,8 +129,7 @@ export const Assist = () => {
                 </div>
             </div>
         </>
-
-  )
+    )
 }
 
-export default Assist
+export default Test
