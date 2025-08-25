@@ -5,7 +5,6 @@ import CalltoAction from '../components/CalltoAction';
 import { Link } from 'react-router-dom';
 import { useState } from "react";
 import { Title, Meta } from "react-head";
-import Head from 'next/head'
 
 
 const About = () => {
@@ -15,55 +14,52 @@ const About = () => {
     <>
 
       {/* SEO */}
-      <Head>
-        <Title>Mojo Folks - Tentang Kami IT Agency</Title>
-        <Meta name="description" content="Kenali Mojo Folks, IT Agency dari Mataram - Bima yang berfokus pada solusi digital kreatif, konsultasi IT, dan pengembangan sistem digital profesional." />
-        <Meta name="keywords" content="Tentang Mojo Folks, IT Agency Lombok, Konsultan IT Mataram, Website Developer NTB, Digital Agency NTB,  Website Developer Mataram, Jasa Pembuatan Website Mataram dan Bima" />
+      <Title>Mojo Folks - Tentang Kami IT Agency</Title>
+      <Meta name="description" content="Kenali Mojo Folks, IT Agency dari Mataram - Bima yang berfokus pada solusi digital kreatif, konsultasi IT, dan pengembangan sistem digital profesional." />
+      <Meta name="keywords" content="Tentang Mojo Folks, IT Agency Lombok, Konsultan IT Mataram, Website Developer NTB, Digital Agency NTB,  Website Developer Mataram, Jasa Pembuatan Website Mataram dan Bima" />
 
-        {/* Open Graph */}
-        <Meta property="og:title" content="Mojo Folks - Tentang Kami" />
-        <Meta property="og:description" content="Mojo Folks, IT Agency di Lombok, siap mendukung bisnis dengan solusi digital dan konsultasi IT yang inovatif." />
-        <Meta property="og:image" content="https://mojofolks.com/assets/img/kreatifteam.webp" />
-        <Meta property="og:url" content="https://mojofolks.com/about" />
-        <Meta property="og:type" content="website" />
+      {/* Open Graph */}
+      <Meta property="og:title" content="Mojo Folks - Tentang Kami" />
+      <Meta property="og:description" content="Mojo Folks, IT Agency di Lombok, siap mendukung bisnis dengan solusi digital dan konsultasi IT yang inovatif." />
+      <Meta property="og:image" content="https://mojofolks.com/assets/img/kreatifteam.webp" />
+      <Meta property="og:url" content="https://mojofolks.com/about" />
+      <Meta property="og:type" content="website" />
 
-        {/* Twitter Card */}
-        <Meta name="twitter:card" content="summary_large_image" />
-        <Meta name="twitter:title" content="Mojo Folks - Tentang Kami" />
-        <Meta name="twitter:description" content="Profesional IT Agency dari Lombok yang berfokus pada inovasi digital dan layanan website." />
-        <Meta name="twitter:image" content="https://mojofolks.com/assets/img/kreatifteam.webp" />
-      </Head>
+      {/* Twitter Card */}
+      <Meta name="twitter:card" content="summary_large_image" />
+      <Meta name="twitter:title" content="Mojo Folks - Tentang Kami" />
+      <Meta name="twitter:description" content="Profesional IT Agency dari Lombok yang berfokus pada inovasi digital dan layanan website." />
+      <Meta name="twitter:image" content="https://mojofolks.com/assets/img/kreatifteam.webp" />
 
-
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "Mojo Folks",
-            "url": "https://mojofolks.com/about",
-            "logo": "https://mojofolks.com/assets/img/mujo.webp",
-            "description": "Mojo Folks adalah IT Agency dari Lombok yang berfokus pada solusi digital kreatif, konsultasi IT, dan pengembangan website profesional.",
-            "foundingDate": "2023",
-            "founder": {
-              "@type": "Person",
-              "name": "Tim Mojo Folks"
-            },
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Mataram",
-              "addressRegion": "Nusa Tenggara Barat",
-              "addressCountry": "ID"
-            },
-            "sameAs": [
-              "https://facebook.com/mojofolks",
-              "https://instagram.com/mojofolks",
-              "https://linkedin.com/company/mojofolks"
-            ]
-          })
-        }}
-      />
+<script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Mojo Folks",
+      "url": "https://mojofolks.com/about",
+      "logo": "https://mojofolks.com/assets/img/mujo.webp",
+      "description": "Mojo Folks adalah IT Agency dari Lombok yang berfokus pada solusi digital kreatif, konsultasi IT, dan pengembangan website profesional.",
+      "foundingDate": "2023",
+      "founder": {
+        "@type": "Person",
+        "name": "Tim Mojo Folks"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Mataram",
+        "addressRegion": "Nusa Tenggara Barat",
+        "addressCountry": "ID"
+      },
+      "sameAs": [
+        "https://facebook.com/mojofolks",
+        "https://instagram.com/mojofolks",
+        "https://linkedin.com/company/mojofolks"
+      ]
+    })
+  }}
+/>
 
 
 

@@ -4,7 +4,6 @@ import { listClient } from './data';
 import { listBidangUsaha } from "./data"
 import { Link } from 'react-router-dom';
 import { Title, Meta } from "react-head";
-import Head from 'next/head'
 
 
 
@@ -14,50 +13,47 @@ function App() {
     <>
 
       {/* SEO */}
-      <Head>
-        <Title>Mojo Folks - IT Agency</Title>
-        <Meta name="description" content="Layanan kreatif Mojo Folks untuk membantu bisnis Anda tumbuh dengan solusi digital." />
-        <Meta name="keywords" content="Website Developer Mataram, IT Consultant Mataram, Website Developer Lombok, IT Agency NTB, Jasa Pembuatan Website Mataram, Mojo Folks" />
+      <Title>Mojo Folks - IT Agency</Title>
+      <Meta name="description" content="Layanan kreatif Mojo Folks untuk membantu bisnis Anda tumbuh dengan solusi digital." />
+      <Meta name="keywords" content="Website Developer Mataram, IT Consultant Mataram, Website Developer Lombok, IT Agency NTB, Jasa Pembuatan Website Mataram, Mojo Folks" />
 
-        {/* Open Graph (FB, WhatsApp, LinkedIn) */}
-        <Meta property="og:title" content="Mojo Folks - Profesional IT Agency" />
-        <Meta property="og:description" content="Layanan kreatif Mojo Folks untuk membantu bisnis Anda tumbuh." />
-        <Meta property="og:image" content="https://mojofolks.com/assets/img/programmer.webp" />
-        <Meta property="og:url" content="https://mojofolks.com" />
-        <Meta property="og:type" content="website" />
+      {/* Open Graph (FB, WhatsApp, LinkedIn) */}
+      <Meta property="og:title" content="Mojo Folks - Profesional IT Agency" />
+      <Meta property="og:description" content="Layanan kreatif Mojo Folks untuk membantu bisnis Anda tumbuh." />
+      <Meta property="og:image" content="https://mojofolks.com/assets/img/programmer.webp" />
+      <Meta property="og:url" content="https://mojofolks.com" />
+      <Meta property="og:type" content="website" />
 
-        {/* Twitter Card */}
-        <Meta name="twitter:card" content="summary_large_image" />
-        <Meta name="twitter:title" content="Mojo Folks - Profesional IT Agency" />
-        <Meta name="twitter:description" content="Solusi digital kreatif untuk bisnis Anda. Website developer dan IT consultant di Lombok & Bima." />
-        <Meta name="twitter:image" content="https://mojofolks.com/assets/img/programmer.webp" />
-      </Head>
-
+      {/* Twitter Card */}
+      <Meta name="twitter:card" content="summary_large_image" />
+      <Meta name="twitter:title" content="Mojo Folks - Profesional IT Agency" />
+      <Meta name="twitter:description" content="Solusi digital kreatif untuk bisnis Anda. Website developer dan IT consultant di Lombok & Bima." />
+      <Meta name="twitter:image" content="https://mojofolks.com/assets/img/programmer.webp" />
 
       <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "Mojo Folks",
-            "url": "https://mojofolks.com",
-            "logo": "https://mojofolks.com/assets/img/mujo.webp",
-            "sameAs": [
-              "https://facebook.com/mojofolks",
-              "https://instagram.com/mojofolks",
-              "https://linkedin.com/company/mojofolks"
-            ],
-            "contactPoint": {
-              "@type": "ContactPoint",
-              "telephone": "+62-813-3796-1020",
-              "contactType": "Customer Service",
-              "areaServed": ["Mataram", "Lombok", "Bali", "Bima", "Dompu", "Sumbawa", "Indonesia"],
-              "availableLanguage": ["Indonesian", "English"]
-            }
-          })
-        }}
-      />
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Mojo Folks",
+      "url": "https://mojofolks.com",
+      "logo": "https://mojofolks.com/assets/img/mujo.webp",
+      "sameAs": [
+        "https://facebook.com/mojofolks",
+        "https://instagram.com/mojofolks",
+        "https://linkedin.com/company/mojofolks"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+62-813-3796-1020",
+        "contactType": "Customer Service",
+        "areaServed": ["Mataram", "Lombok", "Bali","Bima","Dompu", "Sumbawa", "Indonesia"],
+        "availableLanguage": ["Indonesian", "English"]
+      }
+    })
+  }}
+/>
 
 
 
