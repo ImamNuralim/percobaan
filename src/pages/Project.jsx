@@ -4,6 +4,7 @@ import { IoArrowForward, IoArrowBack } from "react-icons/io5";
 import CalltoAction from "../components/CalltoAction";
 import "aos/dist/aos.css";
 import { Title, Meta } from "react-head";
+import Head from 'next/head'
 
 const Project = () => {
 
@@ -42,25 +43,28 @@ const Project = () => {
 
     return (
         <>
-            {/* Tampilan halaman utama (hero, daftar proyek, dan CTA) akan disembunyikan jika ada proyek yang dipilih */}
+
             {!selectedProject && (
                 <>
-                    <Title>Mojo Folks - Portofolio & Project</Title>
-                    <Meta name="description" content="Lihat project dan portofolio Mojo Folks. Kami telah membantu bisnis dari berbagai industri dengan solusi IT dan website kreatif." />
-                    <Meta name="keywords" content="Portofolio Website Mataram, IT Konsultan Lombok, IT Konsultan Mataram, IT Konsultan NTB, Project IT Lombok, Hasil Pekerjaan Mojo Folks, Web Developer NTB, Project Mojo Folks" />
+                    <Head>
+                        <Title>Mojo Folks - Portofolio & Project</Title>
+                        <Meta name="description" content="Lihat project dan portofolio Mojo Folks. Kami telah membantu bisnis dari berbagai industri dengan solusi IT dan website kreatif." />
+                        <Meta name="keywords" content="Portofolio Website Mataram, IT Konsultan Lombok, IT Konsultan Mataram, IT Konsultan NTB, Project IT Lombok, Hasil Pekerjaan Mojo Folks, Web Developer NTB, Project Mojo Folks" />
 
-                    {/* Open Graph */}
-                    <Meta property="og:title" content="Mojo Folks - Project & Portofolio" />
-                    <Meta property="og:description" content="Dokumentasi project IT dan website dari Mojo Folks untuk berbagai klien dan bisnis." />
-                    <Meta property="og:image" content="https://mojofolks.com/assets/img/digital era.webp" />
-                    <Meta property="og:url" content="https://mojofolks.com/project" />
-                    <Meta property="og:type" content="website" />
+                        {/* Open Graph */}
+                        <Meta property="og:title" content="Mojo Folks - Project & Portofolio" />
+                        <Meta property="og:description" content="Dokumentasi project IT dan website dari Mojo Folks untuk berbagai klien dan bisnis." />
+                        <Meta property="og:image" content="https://mojofolks.com/assets/img/digital era.webp" />
+                        <Meta property="og:url" content="https://mojofolks.com/project" />
+                        <Meta property="og:type" content="website" />
 
-                    {/* Twitter Card */}
-                    <Meta name="twitter:card" content="summary_large_image" />
-                    <Meta name="twitter:title" content="Mojo Folks - Project & Portofolio IT" />
-                    <Meta name="twitter:description" content="Hasil kerja kreatif Mojo Folks dalam pembuatan website & solusi IT di Lombok, NTB." />
-                    <Meta name="twitter:image" content="https://mojofolks.com/assets/img/digital era.webp" />
+                        {/* Twitter Card */}
+                        <Meta name="twitter:card" content="summary_large_image" />
+                        <Meta name="twitter:title" content="Mojo Folks - Project & Portofolio IT" />
+                        <Meta name="twitter:description" content="Hasil kerja kreatif Mojo Folks dalam pembuatan website & solusi IT di Lombok, NTB." />
+                        <Meta name="twitter:image" content="https://mojofolks.com/assets/img/digital era.webp" />
+                    </Head>
+
 
                     <script
                         type="application/ld+json"

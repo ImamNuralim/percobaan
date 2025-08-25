@@ -5,7 +5,7 @@ export const Services = () => {
     return (
         <>
 
-            <Title>Layanan Kami - Mojo Folks</Title>
+            <Title>Mojo Folks - Layanan IT & Konsultasi</Title>
             <Meta
                 name="description"
                 content="Mojo Folks menyediakan layanan Web Development, Branding, SEO, dan IT Consulting di Mataram & Bima."
@@ -17,15 +17,22 @@ export const Services = () => {
                     __html: JSON.stringify({
                         "@context": "https://schema.org",
                         "@type": "Service",
-                        "serviceType": "Digital Solutions",
+                        "serviceType": "Website Development & IT Consulting",
                         "provider": {
                             "@type": "Organization",
                             "name": "Mojo Folks",
-                            "url": "https://mojofolks.com",
-                            "logo": "https://mojofolks.com/assets/img/software-development-team.webp"
+                            "url": "https://mojofolks.com/service",
+                            "logo": "https://mojofolks.com/assets/img/mujo.webp"
                         },
-                        "areaServed": "Mataram, Lombok, Bima",
-                        "description": "Mojo Folks menyediakan Web Development, Branding, SEO, dan IT Consulting."
+                        "areaServed": [
+                            { "@type": "Place", "name": "Mataram, Lombok" },
+                            { "@type": "Place", "name": "Bali" },
+                            { "@type": "Place", "name": "Bima" },
+                            { "@type": "Place", "name": "Sumbawa" },
+                            { "@type": "Place", "name": "Dompu" },
+                            { "@type": "Place", "name": "Indonesia" }
+                        ],
+                        "description": "Layanan profesional Mojo Folks: pembuatan website, IT consulting, dan solusi digital inovatif untuk bisnis."
                     })
                 }}
             />

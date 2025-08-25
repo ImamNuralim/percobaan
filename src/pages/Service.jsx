@@ -6,6 +6,7 @@ import { useState } from "react";
 import CalltoAction from '../components/CalltoAction';
 import { Title, Meta } from "react-head";
 import { Test } from "../components/Test";
+import Head from 'next/head'
 
 
 
@@ -13,52 +14,50 @@ export const Service = () => {
   const [open, setOpen] = useState(false);
   return (
     <>
+      <Head>
+        {/* SEO */}
+        <Title>Mojo Folks - Layanan IT & Konsultasi</Title>
+        <Meta name="description" content="Jelajahi layanan Mojo Folks: Konsultasikan kebutuhan perusahaan dan solusi digital inovatif untuk mendukung pertumbuhan bisnis Anda." />
+        <Meta name="keywords" content="Layanan IT Mataram, IT Consultant Lombok, IT Agency Lombok, Website Development NTB, Jasa IT Mataram, IT Developer Lombok, Mojo Folks Service" />
 
+        {/* Open Graph */}
+        <Meta property="og:title" content="Mojo Folks - Layanan IT & Konsultasi" />
+        <Meta property="og:description" content="Solusi digital komprehensif dari perencanaan, pengembangan, hingga eksekusi digital untuk bisnis Anda." />
+        <Meta property="og:image" content="https://mojofolks.com/assets/img/grow-business.webp" />
+        <Meta property="og:url" content="https://mojofolks.com/service" />
+        <Meta property="og:type" content="website" />
 
-      {/* SEO */}
-      <Title>Mojo Folks - Layanan IT & Konsultasi</Title>
-      <Meta name="description" content="Jelajahi layanan Mojo Folks: Konsultasikan kebutuhan perusahaan dan solusi digital inovatif untuk mendukung pertumbuhan bisnis Anda." />
-      <Meta name="keywords" content="Layanan IT Mataram, IT Consultant Lombok, IT Agency Lombok, Website Development NTB, Jasa IT Mataram, IT Developer Lombok, Mojo Folks Service" />
-
-      {/* Open Graph */}
-      <Meta property="og:title" content="Mojo Folks - Layanan IT & Konsultasi" />
-      <Meta property="og:description" content="Solusi digital komprehensif dari perencanaan, pengembangan, hingga eksekusi digital untuk bisnis Anda." />
-      <Meta property="og:image" content="https://mojofolks.com/assets/img/grow-business.webp" />
-      <Meta property="og:url" content="https://mojofolks.com/service" />
-      <Meta property="og:type" content="website" />
-
-      {/* Twitter Card */}
-      <Meta name="twitter:card" content="summary_large_image" />
-      <Meta name="twitter:title" content="Mojo Folks - Service IT & Digital Solution" />
-      <Meta name="twitter:description" content="Temukan layanan website development dan konsultasi IT profesional di Lombok & NTB." />
-      <Meta name="twitter:image" content="https://mojofolks.com/assets/img/grow-business.webp" />
-
-
+        {/* Twitter Card */}
+        <Meta name="twitter:card" content="summary_large_image" />
+        <Meta name="twitter:title" content="Mojo Folks - Service IT & Digital Solution" />
+        <Meta name="twitter:description" content="Temukan layanan website development dan konsultasi IT profesional di Lombok & NTB." />
+        <Meta name="twitter:image" content="https://mojofolks.com/assets/img/grow-business.webp" />
+      </Head>
       <script
-  type="application/ld+json"
-  dangerouslySetInnerHTML={{
-    __html: JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "serviceType": "Website Development & IT Consulting",
-      "provider": {
-        "@type": "Organization",
-        "name": "Mojo Folks",
-        "url": "https://mojofolks.com/service",
-        "logo": "https://mojofolks.com/assets/img/mujo.webp"
-      },
-      "areaServed": [
-        { "@type": "Place", "name": "Mataram, Lombok" },
-        { "@type": "Place", "name": "Bali" },
-        { "@type": "Place", "name": "Bima" },
-        { "@type": "Place", "name": "Sumbawa" },
-        { "@type": "Place", "name": "Dompu" },
-        { "@type": "Place", "name": "Indonesia" }
-      ],
-      "description": "Layanan profesional Mojo Folks: pembuatan website, IT consulting, dan solusi digital inovatif untuk bisnis."
-    })
-  }}
-/>
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "serviceType": "Website Development & IT Consulting",
+            "provider": {
+              "@type": "Organization",
+              "name": "Mojo Folks",
+              "url": "https://mojofolks.com/service",
+              "logo": "https://mojofolks.com/assets/img/mujo.webp"
+            },
+            "areaServed": [
+              { "@type": "Place", "name": "Mataram, Lombok" },
+              { "@type": "Place", "name": "Bali" },
+              { "@type": "Place", "name": "Bima" },
+              { "@type": "Place", "name": "Sumbawa" },
+              { "@type": "Place", "name": "Dompu" },
+              { "@type": "Place", "name": "Indonesia" }
+            ],
+            "description": "Layanan profesional Mojo Folks: pembuatan website, IT consulting, dan solusi digital inovatif untuk bisnis."
+          })
+        }}
+      />
 
       <div className="bg-[#070920] text-white py-20 sm:mb-10 md:py-35 w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] md:pt-36 md:mb-20">
         <div className="container mx-auto px-6 sm:px-5 md:px-1 lg:px-20 flex flex-col md:flex-row items-center justify-between">
