@@ -21,23 +21,27 @@ export const Footer = () => {
             <a href="#" className="inline-block p-1 border border-gray-500 ">
               <i className="ri-linkedin-box-line text-4xl"></i>
             </a>
-            
+
           </div>
 
           {/* Middle Section - Social Links */}
           <div className="flex-1 mb-8 md:mb-0">
             <h4 className="text-lg font-semibold mb-4">Informasi Kontak</h4>
             <ul className="space-y-2">
-            <li>
-                <a href="#" className="text-gray-400 hover:text-gray-300">Based in Mataram & Bima</a>
+              <li>
+                <p href="#" className="text-gray-400 hover:text-gray-300">Based in Mataram & Bima</p>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-gray-300">info@mojofolks.com</a>
+                <a
+                  href="mailto:info@mojofolks.com?subject=Penawaran%20Kerjasama&body=Halo%20Mojo%20Folks,"
+                  className="text-gray-400 hover:text-gray-300">
+                  info@mojofolks.com
+                </a>
               </li>
               <li>
                 <a href="https://wa.me/6281337961020?text=Halloo%20Mojo%20Folks:)" className="text-gray-400 hover:text-gray-300">+62 813-3796-1020</a>
               </li>
-              
+
             </ul>
           </div>
 
@@ -62,7 +66,7 @@ export const Footer = () => {
           <p className="mb-4 sm:mb-0">
             ©2023 Mojo Folks. All Rights Reserved
           </p>
-          
+
         </div>
       </div>
     </div>

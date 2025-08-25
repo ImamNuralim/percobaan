@@ -14,42 +14,53 @@ const About = () => {
     <>
 
       {/* SEO */}
-      <Title>Tentang Kami - Mojo Folks</Title>
-      <Meta name="description" content="Mojo Folks adalah IT agency dan website developer profesional yang berbasis di Bima dan Mataram. Kami membantu bisnis tumbuh dengan solusi kreatif digital." />
-      <Meta name="keywords" content="Tentang Mojo Folks, Digital Agency Mataram, IT Consultant Lombok, Website Developer Bima, IT Agency NTB" />
+      <Title>Mojo Folks - Tentang Kami IT Agency</Title>
+      <Meta name="description" content="Kenali Mojo Folks, IT Agency dari Mataram - Bima yang berfokus pada solusi digital kreatif, konsultasi IT, dan pengembangan sistem digital profesional." />
+      <Meta name="keywords" content="Tentang Mojo Folks, IT Agency Lombok, Konsultan IT Mataram, Website Developer NTB, Digital Agency NTB,  Website Developer Mataram, Jasa Pembuatan Website Mataram dan Bima" />
 
-      {/* Open Graph (FB, WhatsApp, LinkedIn) */}
-      <Meta property="og:title" content="Tentang Kami - Mojo Folks Digital Agency" />
-      <Meta property="og:description" content="Mojo Folks adalah tim kreatif digital agency di NTB, siap membantu bisnis Anda berkembang." />
-      <Meta property="og:image" content="https://mojofolks.com/assets/img/programmer.webp.webp" />
-      <Meta property="og:url" content="https://mojofolks.com/project" />
+      {/* Open Graph */}
+      <Meta property="og:title" content="Mojo Folks - Tentang Kami" />
+      <Meta property="og:description" content="Mojo Folks, IT Agency di Lombok, siap mendukung bisnis dengan solusi digital dan konsultasi IT yang inovatif." />
+      <Meta property="og:image" content="https://mojofolks.com/assets/img/kreatifteam.webp" />
+      <Meta property="og:url" content="https://mojofolks.com/about" />
       <Meta property="og:type" content="website" />
 
       {/* Twitter Card */}
       <Meta name="twitter:card" content="summary_large_image" />
-      <Meta name="twitter:title" content="Tentang Kami - Mojo Folks IT Agency" />
-      <Meta name="twitter:description" content="Kenali tim Mojo Folks, IT consultant dan website developer di NTB." />
-      <Meta name="twitter:image" content="https://mojofolks.com/assets/img/programmer.webp.webp" />
+      <Meta name="twitter:title" content="Mojo Folks - Tentang Kami" />
+      <Meta name="twitter:description" content="Profesional IT Agency dari Lombok yang berfokus pada inovasi digital dan layanan website." />
+      <Meta name="twitter:image" content="https://mojofolks.com/assets/img/kreatifteam.webp" />
 
-      {/* Structured Data (JSON-LD) */}
-      {/* Structured Data (JSON-LD) */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "AboutPage",
-            "name": "Tentang Mojo Folks",
-            "description": "Mojo Folks adalah tim kreatif digital agency di Mataram, Lombok, dan Bima.",
-            "url": "https://mojofolks.com/about",
-            "publisher": {
-              "@type": "Organization",
-              "name": "Mojo Folks",
-              "url": "https://mojofolks.com"
-            }
-          })
-        }}
-      />
+<script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Mojo Folks",
+      "url": "https://mojofolks.com/about",
+      "logo": "https://mojofolks.com/assets/img/mujo.webp",
+      "description": "Mojo Folks adalah IT Agency dari Lombok yang berfokus pada solusi digital kreatif, konsultasi IT, dan pengembangan website profesional.",
+      "foundingDate": "2023",
+      "founder": {
+        "@type": "Person",
+        "name": "Tim Mojo Folks"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Mataram",
+        "addressRegion": "Nusa Tenggara Barat",
+        "addressCountry": "ID"
+      },
+      "sameAs": [
+        "https://facebook.com/mojofolks",
+        "https://instagram.com/mojofolks",
+        "https://linkedin.com/company/mojofolks"
+      ]
+    })
+  }}
+/>
+
 
 
       <div className="bg-[#070920] text-white py-20 sm:mb-10 md:py-89 w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] md:pt-36 md:mb-20">
@@ -262,7 +273,7 @@ const About = () => {
       </div> */}
 
       {/*Proyek*/}
-      
+
       <CalltoAction />
 
       {/*client*/}

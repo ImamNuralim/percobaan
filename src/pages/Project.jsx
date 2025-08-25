@@ -45,40 +45,55 @@ const Project = () => {
             {/* Tampilan halaman utama (hero, daftar proyek, dan CTA) akan disembunyikan jika ada proyek yang dipilih */}
             {!selectedProject && (
                 <>
-                    <Title>Project - Mojo Folks</Title>
-                    <Meta name="description" content="Lihat portfolio project Mojo Folks sebagai Profesional IT Agency" />
-                    <Meta name="keywords" content="Project Website Mataram, Portofolio Mojo Folks, Project IT Consultant Lombok, Jasa Website NTB, Website Developer Bima" />
+                    <Title>Mojo Folks - Portofolio & Project</Title>
+                    <Meta name="description" content="Lihat project dan portofolio Mojo Folks. Kami telah membantu bisnis dari berbagai industri dengan solusi IT dan website kreatif." />
+                    <Meta name="keywords" content="Portofolio Website Mataram, IT Konsultan Lombok, IT Konsultan Mataram, IT Konsultan NTB, Project IT Lombok, Hasil Pekerjaan Mojo Folks, Web Developer NTB, Project Mojo Folks" />
 
-                    {/* Open Graph (FB, WhatsApp, LinkedIn) */}
-                    <Meta property="og:title" content="Project - Mojo Folks" />
-                    <Meta property="og:description" content="Portofolio project Mojo Folks sebagai website developer dan IT consultant di NTB." />
-                    <Meta property="og:image" content="https://mojofolks.com/assets/img/programmer.webp.webp" />
+                    {/* Open Graph */}
+                    <Meta property="og:title" content="Mojo Folks - Project & Portofolio" />
+                    <Meta property="og:description" content="Dokumentasi project IT dan website dari Mojo Folks untuk berbagai klien dan bisnis." />
+                    <Meta property="og:image" content="https://mojofolks.com/assets/img/digital era.webp" />
                     <Meta property="og:url" content="https://mojofolks.com/project" />
                     <Meta property="og:type" content="website" />
 
                     {/* Twitter Card */}
                     <Meta name="twitter:card" content="summary_large_image" />
-                    <Meta name="twitter:title" content="Project - Mojo Folks" />
-                    <Meta name="twitter:description" content="Lihat hasil karya Mojo Folks: Pembuatan Website dan Aplikasi, IT Consulting, dan Solusi Digital di NTB." />
-                    <Meta name="twitter:image" content="https://mojofolks.com/assets/img/programmer.webp.webp" />
+                    <Meta name="twitter:title" content="Mojo Folks - Project & Portofolio IT" />
+                    <Meta name="twitter:description" content="Hasil kerja kreatif Mojo Folks dalam pembuatan website & solusi IT di Lombok, NTB." />
+                    <Meta name="twitter:image" content="https://mojofolks.com/assets/img/digital era.webp" />
 
-                    {/* Structured Data (JSON-LD) */}
                     <script
                         type="application/ld+json"
                         dangerouslySetInnerHTML={{
                             __html: JSON.stringify({
                                 "@context": "https://schema.org",
-                                "@type": "CreativeWork",
-                                "name": "Portofolio Project Mojo Folks",
+                                "@type": "CollectionPage",
+                                "name": "Project & Portofolio Mojo Folks",
                                 "url": "https://mojofolks.com/project",
-                                "creator": {
+                                "description": "Kumpulan project IT dan website yang telah dikerjakan Mojo Folks untuk berbagai klien dari berbagai bidang industri.",
+                                "hasPart": [
+                                    {
+                                        "@type": "CreativeWork",
+                                        "name": "Landing Page PT GCI",
+                                        "description": "Pembuatan Landing Page PT Geomineup Consulting Independent",
+                                        "url": "https://mojofolks.com/project"
+                                    },
+                                    {
+                                        "@type": "CreativeWork",
+                                        "name": "Website Mojo Folks",
+                                        "description": "Pembuatan website resmi untuk Mojo Folks.",
+                                        "url": "https://mojofolks.com/project"
+                                    }
+                                ],
+                                "publisher": {
                                     "@type": "Organization",
-                                    "name": "Mojo Folks"
-                                },
-                                "description": "Lihat berbagai project website dan solusi digital yang telah dikembangkan oleh Mojo Folks di NTB."
+                                    "name": "Mojo Folks",
+                                    "logo": "https://mojofolks.com/assets/img/mujo.webp"
+                                }
                             })
                         }}
                     />
+
                     <div className="bg-[#0d082d] text-white py-20 sm:pt- sm:mb-2 md:py-35 w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] md:pt-36 md:mb-20">
                         <div className="container mx-auto px-6 sm:px-5 md:px-1 lg:px-20 flex flex-col md:flex-row items-center justify-between">
                             <div className="absolute inset-0">
