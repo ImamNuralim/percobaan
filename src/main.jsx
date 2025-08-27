@@ -7,6 +7,7 @@ import 'animate.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ScrollToHashElement from "./components/ScrollToHashElement";
 
 
 import App from './App.jsx';
@@ -16,6 +17,7 @@ import Preloader from './components/Preloader.jsx';
 import About from './pages/About.jsx';
 import { Service } from './pages/Service.jsx';
 import Project from './pages/Project.jsx';
+import DetailProject from './pages/DetailProject.jsx';
 
 AOS.init();
 
@@ -23,6 +25,7 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <HeadProvider>   
       <BrowserRouter>
+      <ScrollToHashElement />
         <Preloader />
         <Navbar />
         <div className="overflow-x-hidden">
@@ -32,6 +35,7 @@ createRoot(document.getElementById('root')).render(
               <Route path="/about" element={<About />} />
               <Route path="/service" element={<Service />} />
               <Route path="/project" element={<Project />} />
+              <Route path="/project/:slug" element={<DetailProject />} />
             </Routes>
             <Footer />
           </div>

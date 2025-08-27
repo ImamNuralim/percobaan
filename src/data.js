@@ -119,6 +119,7 @@ import Proyek11 from "/assets/proyek/proyek-11.webp";
 export const listProyek = [
   {
     id: 1,
+    slug: "perhutani-kph-kendal",
     gambar: Proyek1,
     nama: "Sistem Basis Data Perhitani Kendal",
     deskripsiSingkat: "Membuat sistem basis data internal perusahaan sekaligus website transparansi aset perusahaan ke publik.",
@@ -131,6 +132,7 @@ export const listProyek = [
   },
   {
     id: 2,
+    slug: "teras-ilmu-center-semarang",
     gambar: Proyek2,
     nama: "Teras Ilmu Center Q&A",
     deskripsiSingkat: "Aplikasi berbasis website sebagai platform tanya jawab seputar islam yang terinspirasi dari Quora.",
@@ -143,6 +145,7 @@ export const listProyek = [
   },
   {
     id: 3,
+    slug: "fada-tour-semarang",
     gambar: Proyek3,
     nama: "Fada Tour Semarang",
     deskripsiSingkat: "Company profile Fada Tour Semarang yang bergerak di bidang umrah dan travel.",
@@ -155,6 +158,7 @@ export const listProyek = [
   },
   {
     id: 4,
+    slug: "risebloom-x-undip",
     gambar: Proyek4,
     nama: "Risebloom x UNDIP",
     deskripsiSingkat: "Website kolaborasi antara Risebloom dan UNDIP sebagai website edukasi terkait cara pencegahan Penyakit Seksual Menular (PSM) dan HIV/AIDS.",
@@ -167,6 +171,7 @@ export const listProyek = [
   },
   {
     id: 5,
+    slug: "e-catalog-kraton-surakarta",
     gambar: Proyek5,
     nama: "E-Catalog Kraton Surakarta",
     deskripsiSingkat: "Website E-Catalog Kraton Surakarta yang menampilkan berbagai produk dan informasi terkait koleksi museum.",
@@ -179,6 +184,7 @@ export const listProyek = [
   },
   {
     id: 6,
+    slug: "dphilia-cafe-resto",
     gambar: Proyek6,
     nama: "Dphilia Cafe & Resto",
     deskripsiSingkat: "Landing page cafe yang menampilkan berbagai informasi seperti menu, detail location, promo produk, dll.",
@@ -191,6 +197,7 @@ export const listProyek = [
   },
   {
     id: 7,
+    slug: "company-profile-cv-nuansa-gis-konsultan",
     gambar: Proyek7,
     nama: "Company Profile CV Nuansa Gis Consultan",
     deskripsiSingkat: "Membangun ulang website perusahaan dengan lebih estetis dan responsive",
@@ -203,6 +210,7 @@ export const listProyek = [
   },
   {
     id: 8,
+    slug: "cerindo-landing-ceriagis",
     gambar: Proyek8,
     nama: "Cerindo : Landing Ceriagis",
     deskripsiSingkat: "Landing page berisi sekilas informasi GIS PT. Cerindo Corp. Cerindo adalah perusahaan yang bergerak dibidang dipertambangan nikel.",
@@ -215,6 +223,7 @@ export const listProyek = [
   },
   {
     id: 9,
+    slug: "company-profile-pt-geomineup-consulting-independent",
     gambar: Proyek9,
     nama: "Company Profile PT. GCI",
     deskripsiSingkat: "Website perusahaan PT. Geimineup Consulting Indipendent yang berisi tentang layanan konsultan dibidang pertambangan",
@@ -227,6 +236,7 @@ export const listProyek = [
   },
   {
     id: 10,
+    slug: "web-profile-mujo-folks",
     gambar: Proyek10,
     nama: "Web Profile Mujo Folks",
     deskripsiSingkat: "Pembuatan website profile yang berisi tentang layanan yang ditawarkan Moojo Folk. Mujo Folks yang merupakan komunitas penggiat teknologi di Bima-Mataram",
@@ -239,6 +249,7 @@ export const listProyek = [
   },
   {
     id: 11,
+    slug: "hr-system-pt-indocement-tunggal-perkasa",
     gambar: Proyek11,
     nama: "HR System PT Indocement Tunggal Perkasa",
     deskripsiSingkat: "Membuat sistem HRD Perusahaan Indoocement Cirebon",

@@ -4,6 +4,7 @@ import { IoArrowForward, IoArrowBack } from "react-icons/io5";
 import CalltoAction from "../components/CalltoAction";
 import "aos/dist/aos.css";
 import { Title, Meta } from "react-head";
+import { Link } from "react-router-dom";
 
 const Project = () => {
 
@@ -125,7 +126,7 @@ const Project = () => {
                     </div>
 
                     {/* Menggunakan ref pada div proyek */}
-                    <div ref={projectsSectionRef} className="bg-gray-100 mt-[-78px] py-16 px-4 sm:px-8 lg:px-12 w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
+                    <div id="projects-list" ref={projectsSectionRef} className="bg-gray-100 mt-[-78px] py-16 px-4 sm:px-8 lg:px-12 w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
                         {/* Tampilan Daftar Proyek */}
                         <div className="text-center mb-12" data-aos="fade-up" data-aos-duration="800" data-aos-delay="800" data-aos-once="true">
                             <h2 className="text-4xl font-bold text-gray-800 mb-2">Our Projects</h2>
@@ -150,11 +151,11 @@ const Project = () => {
                                         <h3 className="text-md font-semibold text-gray-900 mb-2">{proyek.nama}</h3>
                                         <p className="text-sm text-gray-600 mb-4 flex-grow">{proyek.deskripsiSingkat}</p>
                                         <button
-                                            onClick={() => handleViewProject(proyek)}
-                                            className="mt-auto px-6 py-3 bg-gray-900 text-white flex items-center justify-center space-x-2 hover:bg-gray-700 transition-colors"
-                                        >
-                                            <span>View project</span>
-                                            <IoArrowForward />
+                                            className="mt-auto px-6 py-3 bg-gray-900 text-white flex items-center justify-center space-x-2 hover:bg-gray-700 transition-colors">
+                                            <Link to={`/project/${proyek.slug}`} className="flex items-center space-x-2">
+                                                <span>View project</span>
+                                                <IoArrowForward />
+                                            </Link>
                                         </button>
                                     </div>
                                 </div>
