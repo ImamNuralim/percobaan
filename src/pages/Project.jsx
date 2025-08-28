@@ -3,35 +3,41 @@ import { listProyek } from '../data';
 import { IoArrowForward, IoArrowBack } from "react-icons/io5";
 import CalltoAction from "../components/CalltoAction";
 import "aos/dist/aos.css";
-import { Title, Meta } from "react-head";
-import { Link } from "react-router-dom";
+
+
 
 const Project = () => {
-
     const [selectedProject, setSelectedProject] = useState(null);
     const [visibleProjectsCount, setVisibleProjectsCount] = useState(5);
+    const [lastScrollY, setLastScrollY] = useState(0);
 
-    // Membuat ref untuk bagian daftar proyek
     const projectsSectionRef = useRef(null);
 
     const handleViewProject = (project) => {
+        // Simpan posisi scroll sebelum masuk detail
+        setLastScrollY(window.scrollY);
+
+        // Set project yang dipilih
         setSelectedProject(project);
+
+        // Scroll otomatis ke atas biar tampilan detail mulai dari atas
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
     };
 
+
     const handleBackToList = () => {
-        // Mengatur ulang state untuk kembali ke daftar proyek
         setSelectedProject(null);
 
-        // Menggunakan setTimeout untuk memberi waktu render
-        // sebelum melakukan scroll
+        // Balikin ke posisi scroll sebelum buka detail
         setTimeout(() => {
-            if (projectsSectionRef.current) {
-                projectsSectionRef.current.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        }, 100); // Penundaan 100ms sudah cukup
+            window.scrollTo({
+                top: lastScrollY,
+                behavior: "smooth",
+            });
+        }, 100);
     };
 
     const handleLoadMore = () => {
@@ -43,25 +49,10 @@ const Project = () => {
 
     return (
         <>
-            {/* Tampilan halaman utama (hero, daftar proyek, dan CTA) akan disembunyikan jika ada proyek yang dipilih */}
+
             {!selectedProject && (
                 <>
-                    <Title>Mojo Folks - Portofolio & Project</Title>
-                    <Meta name="description" content="Lihat project dan portofolio Mojo Folks. Kami telah membantu bisnis dari berbagai industri dengan solusi IT dan website kreatif." />
-                    <Meta name="keywords" content="Portofolio Website Mataram, IT Konsultan Lombok, IT Konsultan Mataram, IT Konsultan NTB, Project IT Lombok, Hasil Pekerjaan Mojo Folks, Web Developer NTB, Project Mojo Folks" />
 
-                    {/* Open Graph */}
-                    <Meta property="og:title" content="Mojo Folks - Project & Portofolio" />
-                    <Meta property="og:description" content="Dokumentasi project IT dan website dari Mojo Folks untuk berbagai klien dan bisnis." />
-                    <Meta property="og:image" content="https://mojofolks.com/assets/img/digital era.webp" />
-                    <Meta property="og:url" content="https://mojofolks.com/project" />
-                    <Meta property="og:type" content="website" />
-
-                    {/* Twitter Card */}
-                    <Meta name="twitter:card" content="summary_large_image" />
-                    <Meta name="twitter:title" content="Mojo Folks - Project & Portofolio IT" />
-                    <Meta name="twitter:description" content="Hasil kerja kreatif Mojo Folks dalam pembuatan website & solusi IT di Lombok, NTB." />
-                    <Meta name="twitter:image" content="https://mojofolks.com/assets/img/digital era.webp" />
 
                     <script
                         type="application/ld+json"
@@ -126,7 +117,7 @@ const Project = () => {
                     </div>
 
                     {/* Menggunakan ref pada div proyek */}
-                    <div id="projects-list" ref={projectsSectionRef} className="bg-gray-100 mt-[-78px] py-16 px-4 sm:px-8 lg:px-12 w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
+                    <div ref={projectsSectionRef} className="bg-gray-100 mt-[-78px] py-16 px-4 sm:px-8 lg:px-12 w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
                         {/* Tampilan Daftar Proyek */}
                         <div className="text-center mb-12" data-aos="fade-up" data-aos-duration="800" data-aos-delay="800" data-aos-once="true">
                             <h2 className="text-4xl font-bold text-gray-800 mb-2">Our Projects</h2>
@@ -151,11 +142,11 @@ const Project = () => {
                                         <h3 className="text-md font-semibold text-gray-900 mb-2">{proyek.nama}</h3>
                                         <p className="text-sm text-gray-600 mb-4 flex-grow">{proyek.deskripsiSingkat}</p>
                                         <button
-                                            className="mt-auto px-6 py-3 bg-gray-900 text-white flex items-center justify-center space-x-2 hover:bg-gray-700 transition-colors">
-                                            <Link to={`/project/${proyek.slug}`} className="flex items-center space-x-2">
-                                                <span>View project</span>
-                                                <IoArrowForward />
-                                            </Link>
+                                            onClick={() => handleViewProject(proyek)}
+                                            className="mt-auto px-6 py-3 bg-gray-900 text-white flex items-center justify-center space-x-2 hover:bg-gray-700 transition-colors"
+                                        >
+                                            <span>View project</span>
+                                            <IoArrowForward />
                                         </button>
                                     </div>
                                 </div>
