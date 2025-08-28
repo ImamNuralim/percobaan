@@ -5,20 +5,35 @@ import { IoArrowBack } from "react-icons/io5";
 
 
 
+
 const DetailProject = () => {
     const { slug } = useParams();
   const proyek = listProyek.find((p) => p.slug.toString() === slug);
 
+  const handleBackToList = () => {
+        setSelectedProject(null);
+
+        // Balikin ke posisi scroll sebelum buka detail
+        setTimeout(() => {
+            window.scrollTo({
+                top: lastScrollY,
+                behavior: "smooth",
+            });
+        }, 100);
+    };
+    
   if (!proyek) {
     return (
       <div className="p-10 text-center">
         <h2 className="text-2xl font-bold">Project not found</h2>
-        <Link to="/project#projects-list" className="text-blue-600 mt-4 inline-block">
+        <button onClick={handleBackToList} className="text-blue-600 mt-4 inline-block">
           Back to Projects
-        </Link>
+        </button>
       </div>
     );
+    
   }
+
   return (
     <div
       className={`bg-white shadow-lg p-8 md:p-12 transition-all duration-500 mt-18 w-screen -ml-[50vw] -mr-[50vw] relative left-1/2 right-1/2 overflow-hidden`}
