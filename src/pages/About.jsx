@@ -277,7 +277,7 @@ const About = () => {
       <CalltoAction />
 
       {/*client*/}
-      <div
+      {/* <div
         className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-zinc-200 backdrop-blur-md py-20">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-center mb-5 font-semibold">Our happy client:</h2>
@@ -300,7 +300,7 @@ const About = () => {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
 
 
     </>

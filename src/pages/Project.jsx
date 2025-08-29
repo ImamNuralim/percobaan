@@ -95,21 +95,19 @@ const Project = () => {
                         }}
                     />
 
-                    <div className="bg-[#0d082d] text-white py-20 sm:pt- sm:mb-2 md:py-35 w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] md:pt-36 md:mb-20">
+                    <div className="bg-[#0d082d] text-white py-20  sm:mb-2 md:py-35 w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] md:pt-36 md:mb-20">
                         <div className="container mx-auto px-6 sm:px-5 md:px-1 lg:px-20 flex flex-col md:flex-row items-center justify-between">
                             <div className="absolute inset-0">
-                                {/* ... (content for hero section) ... */}
                             </div>
-                            {/* Left Section - Text Content */}
+                            
                             <div className="md:w-1/2 mb-10 md:mb-0 md:pr-12 " data-aos="fade-up"
                                 data-aos-duration="1000">
                                 <p className="text-sm uppercase tracking-widest text-light-blue mb-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600" data-aos-once="true">
                                     Our Project
                                 </p>
                                 <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700" data-aos-once="true">
-                                    Menampilkan Karya Terbaik Kami
+                                    Keahlian dan Dedikasi Tim Kami
                                 </h1>
-                                {/* SVG versi mobile/tab */}
                                 <div className="flex justify-center items-center mb-6 md:hidden" data-aos="fade-up" data-aos-duration="800" data-aos-delay="800" data-aos-once="true">
                                     {/** SVG sama persis kayak yang di desktop */}
                                     <img src="/assets/img/tech-hero-2.webp" alt="Hero Image" className="block md:hidden w-[1200px] md:ml-auto animate__animated animate__fadeInUp animate__delay-3s  md:scale-170 pt-15 lg:translate-x-30 filter drop-shadow-[0_35px_60px_#4426F0]" />
@@ -118,29 +116,23 @@ const Project = () => {
                                     Setiap project adalah bukti nyata komitmen kami dalam menghadirkan solusi digital yang kreatif, profesional, dan berdampak bagi klien.
                                 </p>
                             </div>
-                            {/* Right Section - Image/SVG versi desktop */}
                             <div className="md:w-1/2 justify-center items-center hidden md:flex">
                                 <img src="/assets/img/tech-hero-2.webp" alt="Hero Image" className="hidden md:block w-[1200px] md:ml-auto animate__animated animate__fadeInUp animate__delay-1s  md:scale-170 pt-15 lg:translate-x-30 filter drop-shadow-[0_35px_60px_#4426F0]" />
                             </div>
                         </div>
                     </div>
-
-                    {/* Menggunakan ref pada div proyek */}
-                    <div id="projects-list" ref={projectsSectionRef} className="bg-gray-100 mt-[-78px] py-16 px-4 sm:px-8 lg:px-12 w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
-                        {/* Tampilan Daftar Proyek */}
+                    {/* <div id="projects-list" ref={projectsSectionRef} className="bg-gray-100 mt-[-78px] py-16 px-4 sm:px-8 lg:px-12 w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
                         <div className="text-center mb-12" data-aos="fade-up" data-aos-duration="800" data-aos-delay="800" data-aos-once="true">
                             <h2 className="text-4xl font-bold text-gray-800 mb-2">Our Projects</h2>
                             <p className="text-lg text-gray-600">Jelajahi Beberapa Karya Kami</p>
                         </div>
-                        {/* Grid Proyek */}
                         <div className={`grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3`}>
-                            {/* Menggunakan slice untuk membatasi jumlah proyek yang ditampilkan */}
                             {listProyek.slice(0, visibleProjectsCount).map((proyek) => (
                                 <div
                                     key={proyek.id}
                                     className="bg-white shadow-lg hover:shadow-xl transition-transform duration-300 transform hover:-translate-y-2 overflow-hidden flex flex-col" data-aos="fade-up"
                                     data-aos-duration="1000"
-                                    data-aos-delay={proyek.dad}   // delay tiap card biar naik satu-satu
+                                    data-aos-delay={proyek.dad} 
                                     data-aos-once="true"
                                 >
                                     <div className="relative">
@@ -161,7 +153,6 @@ const Project = () => {
                                 </div>
                             ))}
                         </div>
-                        {/* Tombol "Load More" */}
                         {isLoadMoreVisible && (
                             <div className="text-center mt-12">
                                 <button
@@ -172,8 +163,8 @@ const Project = () => {
                                 </button>
                             </div>
                         )}
-                    </div>
-                    <div className="xl:mt-0 md:mt-25 grid grid-cols-1 md:grid-cols-2 gap-0 w-screen -ml-[50vw] -mr-[50vw] relative left-1/2 right-1/2 overflow-hidden">
+                    </div> */}
+                    <div className="xl:mt-0 md:mt-[-15] grid grid-cols-1 md:grid-cols-2 gap-0 w-screen -ml-[50vw] -mr-[50vw] relative left-1/2 right-1/2 overflow-hidden">
                         <div className="bg-blue-900 h-[400px] md:h-auto overflow-hidden relative" data-aos="fade-right" data-aos-duration="800" data-aos-delay="800" data-aos-once="true">
                             <img
                                 src="/assets/img/software-development-team.webp"

@@ -88,7 +88,7 @@ export const Service = () => {
       </div>
 
 
-      <div className="w-screen relative left-1/2 mt-[-78px] right-1/2 -ml-[50vw] -mr-[50vw] bg-white backdrop-blur-md py-10 overflow-hidden">
+      {/* <div className="w-screen relative left-1/2 mt-[-78px] right-1/2 -ml-[50vw] -mr-[50vw] bg-white backdrop-blur-md py-10 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex gap-30 animate-slide">
             {[...listClient, ...listClient].map((client, index) => (
@@ -105,7 +105,6 @@ export const Service = () => {
           </div>
         </div>
 
-        {/* CSS untuk animasi */}
         <style jsx>{`
                   @keyframes slide {
                   0% {
@@ -120,7 +119,7 @@ export const Service = () => {
                   animation: slide 25s linear infinite;
                   width: max-content;
                   }`}</style>
-      </div>
+      </div> */}
       <div className="xl:mt-0 md:mt-25 grid grid-cols-1 md:grid-cols-2 gap-0 w-screen -ml-[50vw] -mr-[50vw] relative left-1/2 right-1/2 overflow-hidden">
         <div className="bg-blue-900 h-[400px] md:h-auto overflow-hidden relative" data-aos="fade-right" data-aos-duration="800" data-aos-delay="400" data-aos-once="true">
           <img

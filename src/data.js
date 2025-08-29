@@ -208,21 +208,21 @@ export const listProyek = [
     linkProject: "https://example.com/nuansa-gis",
     dad: "700"
   },
+  // {
+  //   id: 8,
+  //   slug: "cerindo-landing-ceriagis",
+  //   gambar: Proyek8,
+  //   nama: "Cerindo : Landing Ceriagis",
+  //   deskripsiSingkat: "Landing page berisi sekilas informasi GIS PT. Cerindo Corp. Cerindo adalah perusahaan yang bergerak dibidang dipertambangan nikel.",
+  //   deskripsiDetail: "Dalam proyek ini, kami membuat landing page yang menarik dan responsif menggunakan HTML, CSS, dan JavaScript. Kami mengoptimalkan tampilan dan performa landing page agar kompatibel di berbagai perangkat dan browser. Selain itu, kami menyesuaikan desain dan elemen UI agar sesuai dengan kebutuhan branding perusahaan.",
+  //   waktuPengerjaan: "10 hari (10 – 20 Februari 2025)",
+  //   tools: ["HTML", "CSS", "Js"],
+  //   client: "PT. Cerindo Corp",
+  //   linkProject: "https://example.com/cerindo",
+  //   dad: "800"
+  // },
   {
     id: 8,
-    slug: "cerindo-landing-ceriagis",
-    gambar: Proyek8,
-    nama: "Cerindo : Landing Ceriagis",
-    deskripsiSingkat: "Landing page berisi sekilas informasi GIS PT. Cerindo Corp. Cerindo adalah perusahaan yang bergerak dibidang dipertambangan nikel.",
-    deskripsiDetail: "Dalam proyek ini, kami membuat landing page yang menarik dan responsif menggunakan HTML, CSS, dan JavaScript. Kami mengoptimalkan tampilan dan performa landing page agar kompatibel di berbagai perangkat dan browser. Selain itu, kami menyesuaikan desain dan elemen UI agar sesuai dengan kebutuhan branding perusahaan.",
-    waktuPengerjaan: "10 hari (10 – 20 Februari 2025)",
-    tools: ["HTML", "CSS", "Js"],
-    client: "PT. Cerindo Corp",
-    linkProject: "https://example.com/cerindo",
-    dad: "800"
-  },
-  {
-    id: 9,
     slug: "company-profile-pt-geomineup-consulting-independent",
     gambar: Proyek9,
     nama: "Company Profile PT. GCI",
@@ -235,7 +235,7 @@ export const listProyek = [
     dad: "900"
   },
   {
-    id: 10,
+    id: 9,
     slug: "web-profile-mujo-folks",
     gambar: Proyek10,
     nama: "Web Profile Mujo Folks",
@@ -247,19 +247,19 @@ export const listProyek = [
     linkProject: "https://example.com/mujo-folks",
     dad: "1000"
   },
-  {
-    id: 11,
-    slug: "hr-system-pt-indocement-tunggal-perkasa",
-    gambar: Proyek11,
-    nama: "HR System PT Indocement Tunggal Perkasa",
-    deskripsiSingkat: "Membuat sistem HRD Perusahaan Indoocement Cirebon",
-    deskripsiDetail: "Dalam proyek ini, kami bertanggung jawab untuk membangun antarmuka aplikasi Sistem HR menggunakan Electron JS, dengan fokus pada pembuatan tampilan yang user-friendly dan sesuai dengan kebutuhan klien. Kami mengimplementasikan desain dengan memperhatikan prinsip UI/UX agar aplikasi mudah digunakan dan interaktif. Selain itu, kami secara aktif berkoordinasi dengan klien untuk memahami kebutuhan mereka, memberikan pembaruan progres secara berkala, dan memastikan hasil akhir sesuai dengan ekspektasi. Selama proses pengembangan, kami juga bekerja sama dengan tim untuk mengintegrasikan frontend dengan backend secara efisien, sehingga aplikasi berjalan lancar dan dapat memenuhi kebutuhan operasional HR secara optimal.",
-    waktuPengerjaan: "4 bulan (28 Juli – 25 Agustus 2025)",
-    tools: ["Electron Js", "Js", "Tailwind CSS", "HTML"],
-    client: "PT Indocement Tunggal Perkasa",
-    linkProject: "https://example.com/hr-indocement",
-    dad: "1100"
-  },
+  // {
+  //   id: 11,
+  //   slug: "hr-system-pt-indocement-tunggal-perkasa",
+  //   gambar: Proyek11,
+  //   nama: "HR System PT Indocement Tunggal Perkasa",
+  //   deskripsiSingkat: "Membuat sistem HRD Perusahaan Indoocement Cirebon",
+  //   deskripsiDetail: "Dalam proyek ini, kami bertanggung jawab untuk membangun antarmuka aplikasi Sistem HR menggunakan Electron JS, dengan fokus pada pembuatan tampilan yang user-friendly dan sesuai dengan kebutuhan klien. Kami mengimplementasikan desain dengan memperhatikan prinsip UI/UX agar aplikasi mudah digunakan dan interaktif. Selain itu, kami secara aktif berkoordinasi dengan klien untuk memahami kebutuhan mereka, memberikan pembaruan progres secara berkala, dan memastikan hasil akhir sesuai dengan ekspektasi. Selama proses pengembangan, kami juga bekerja sama dengan tim untuk mengintegrasikan frontend dengan backend secara efisien, sehingga aplikasi berjalan lancar dan dapat memenuhi kebutuhan operasional HR secara optimal.",
+  //   waktuPengerjaan: "4 bulan (28 Juli – 25 Agustus 2025)",
+  //   tools: ["Electron Js", "Js", "Tailwind CSS", "HTML"],
+  //   client: "PT Indocement Tunggal Perkasa",
+  //   linkProject: "https://example.com/hr-indocement",
+  //   dad: "1100"
+  // },
 ];
 
 import Client1 from "/assets/img/TIC QnA.webp";
